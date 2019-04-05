@@ -1,0 +1,25 @@
+.purchase-order {
+
+    th[scope=row] {
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .actual-price {
+        text-align: right;
+    }
+
+    .po-total {
+        font-weight: bold;
+        margin-top: 15px;
+
+        .total {
+            background: $white;
+            padding: 1px 10px;
+            margin-left: 20px;
+            border-radius: $border-radius-lg;
+        }
+    }
+}

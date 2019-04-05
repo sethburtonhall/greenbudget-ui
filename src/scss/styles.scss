@@ -1,4 +1,8 @@
+@import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "variables";
+@import "global";
 @import "navbar";
+@import "table";
+@import "budget";
+@import "purchase-orders";
