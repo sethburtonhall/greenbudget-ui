@@ -46,6 +46,12 @@ $theme-colors: (
     "purple":     $purple
 );
 
+@font-face {
+    font-family: "Avenir";
+    src: url("/fonts/Avenir.ttc") format("ttc");
+}
+$font-family-sans-serif:      Avenir;
+
 $enable-responsive-font-sizes: true;
 $enable-shadows: true;
 

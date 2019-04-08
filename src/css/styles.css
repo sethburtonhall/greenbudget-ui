@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir.ttc") format("ttc"); }
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -34,7 +38,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: Avenir;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -53,7 +57,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Avenir;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4494,7 +4498,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Avenir;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4579,7 +4583,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Avenir;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7543,6 +7547,8 @@ a.text-purple:hover, a.text-purple:focus {
     .table th[scope=row] input[type=checkbox] {
       display: none;
       margin-top: 4px; }
+  .table .add-new-row th[scope=row] i {
+    font-size: 20px; }
   .table tr:hover th[scope=row]::before {
     color: #dee2e6; }
   .table tr:hover th[scope=row] span {
@@ -7568,6 +7574,89 @@ a.text-purple:hover, a.text-purple:focus {
       border: none; }
   .table .thead-dark th.negative-variance {
     color: #E05F76; }
+
+form .header {
+  margin-bottom: 40px; }
+
+form .form-control {
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: none;
+  border-radius: 0; }
+
+form label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #6c757d;
+  margin-bottom: 0; }
+
+.signup header,
+.signin header {
+  margin: 0 0 100px 0; }
+  @media (min-width: 768px) {
+    .signup header,
+    .signin header {
+      margin: 30px 0 100px 0; } }
+  .signup header nav,
+  .signin header nav {
+    text-transform: uppercase; }
+    .signup header nav a,
+    .signin header nav a {
+      color: #fff;
+      font-size: 16px; }
+      @media (min-width: 768px) {
+        .signup header nav a,
+        .signin header nav a {
+          font-size: 24px; } }
+
+.signup form,
+.signin form {
+  background-color: #fff;
+  padding: 45px 30px;
+  border-radius: 56px;
+  max-width: 535px;
+  margin: auto; }
+  @media (min-width: 768px) {
+    .signup form,
+    .signin form {
+      padding: 90px 65px; } }
+  .signup form h1,
+  .signin form h1 {
+    font-weight: bold;
+    margin-bottom: 0; }
+  .signup form button,
+  .signin form button {
+    border-radius: 46px;
+    margin: 50px 0 15px 0; }
+
+.signup .footer,
+.signin .footer {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px; }
+  .signup .footer p,
+  .signin .footer p {
+    color: #fff;
+    margin-bottom: 0; }
+  .signup .footer a,
+  .signin .footer a {
+    text-decoration: underline;
+    color: #404152; }
+
+.signup {
+  background: #22c678;
+  background: -moz-linear-gradient(left, #22c678 0%, #009f7a 100%);
+  background: -webkit-linear-gradient(left, #22c678 0%, #009f7a 100%);
+  background: linear-gradient(to right, #22c678 0%, #009f7a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22c678', endColorstr='#009f7a',GradientType=1 ); }
+
+.signin {
+  background: #22c678;
+  background: -moz-linear-gradient(right, #22c678 0%, #009f7a 100%);
+  background: -webkit-linear-gradient(right, #22c678 0%, #009f7a 100%);
+  background: linear-gradient(to left, #22c678 0%, #009f7a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009f7a', endColorstr='#22c678',GradientType=1 ); }
 
 .budget .budget-title {
   text-align: center; }
@@ -7608,8 +7697,11 @@ a.text-purple:hover, a.text-purple:focus {
         .budget .budget-info .card-deck .card .fas {
           font-size: 35px; } }
 
-.purchase-order th[scope=row]::before {
-  content: none; }
+.purchase-order th[scope=row] {
+  text-align: center;
+  padding: .75rem; }
+  .purchase-order th[scope=row]::before {
+    content: none; }
 
 .purchase-order .actual-price {
   text-align: right; }

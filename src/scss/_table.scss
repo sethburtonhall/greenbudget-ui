@@ -31,6 +31,10 @@
         }
     }
 
+    .add-new-row th[scope=row] i {
+        font-size: 20px;
+    }
+
     tr:hover {
 
         th[scope=row] {

@@ -1,6 +1,8 @@
 .purchase-order {
 
     th[scope=row] {
+        text-align: center;
+        padding: .75rem;
 
         &::before {
             content: none;

@@ -1,8 +1,13 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Global
 @import "global";
 @import "navbar";
 @import "table";
+@import "forms";
+
+// Layouts
+@import "signup";
 @import "budget";
 @import "purchase-orders";
