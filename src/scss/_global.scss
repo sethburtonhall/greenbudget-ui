@@ -1,4 +1,11 @@
 .main {
+    width: 1545px;
     max-width: 1545px;
     margin: auto;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
 }

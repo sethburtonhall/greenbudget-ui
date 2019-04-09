@@ -12,349 +12,108 @@
     </head>
 
     <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><i class="fas fa-home"></i> green<span>budget</span> </a>
-
-                <!-- <div class="spinner-border spinner-border-sm" role="status">
-                    <span class="sr-only">Changes Saved</span>
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="far fa-times-circle"></i>
                 </div>
-                <strong class="spinner-status">Changes Saved</strong> -->
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Fringes
-                            <i class="fas fa-percent"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Actual
-                            <i class="fas fa-dollar-sign"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Export
-                            <i class="fas fa-file-export"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Settings
-                            <i class="fas fa-cog"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link avatar" href="#">
-                                <img src="img/avatar.png" alt="Avatar">
-                                Seth Hall
-                            </a>
-                        </li>
-                    </ul>
+                <div class="sidebar-header">
+                    <div class="home">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <img src="/img/user-avatar.png" class="user-avatar" alt="User Avatar">
+                    <h6>Jens Jacob</h6>
+                    <p class="text-muted">Producer</p>
                 </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#" class="d-flex align-items-center">
+                            <span class="fa-stack fa-1x">
+                                <i class="far fa-file fa-stack-1x"></i>
+                                <i class="fas fa-plus fa-stack-1x"></i>
+                            </span>
+                            New Project</a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center"><i class="far fa-copy"></i>My Budgets</a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center"><i class="far fa-address-book"></i>Contacts</a>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="sub-navbar d-flex justify-content-between">
-                <nav class="breadcrumb-nav" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Top Sheet</a></li>
-                        <li class="breadcrumb-item"><a href="#">Production Costs</a></li>
-                    </ol>
+            <!-- Page Content  -->
+            <div id="content" class="home">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light d-sm-block d-lg-none">
+                    <div class="container-fluid">
+                        <button type="button" id="sidebarCollapse" class="btn btn-light">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+                    </div>
                 </nav>
 
-                <div class="btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-light active">
-                        <input type="checkbox" checked autocomplete="off">
-                        Estimated
-                    </label>
-
-                    <label class="btn btn-light">
-                        <input type="checkbox" autocomplete="off">
-                        Running
-                    </label>
-
-                    <label class="btn btn-light">
-                        <input type="checkbox" autocomplete="off">
-                        Actual
-                    </label>
-
-                    <label class="btn btn-light">
-                        <input type="checkbox" autocomplete="off">
-                        Details
-                    </label>
-                </div>
-            </div>
-
-            <div class="main budget">
-                <h1 class="budget-title">Sample Budget 2019</h1>
-
-                <div class="budget-info d-flex justify-content-center">
-                    <div class="card-deck">
-                        <div class="card d-flex justify-content-center align-items-center">
-                            <div class="card-image">
-                                <img src="img/budget-thumbnail.png" class="card-img" alt="Budget Thumbnail">
+                <div class="container d-flex h-100">
+                    <div class="main d-flex flex-column">
+                        <h1 class="header ml-2 mb-5">Project Type</h1>
+                        <div class="icons d-flex justify-content-between">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Standard Template</p>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">#1204 Sample Budget</h5>
-                                <p class="card-text">Shooting Dates:</p>
-                                <p class="card-text">Location:</p>
-                                <p class="card-text">Total Days:</p>
-                            </div>
-                            <i class="fas fa-info-circle"></i>
-                        </div>
 
-                        <div class="card d-flex justify-content-center align-items-center">
-                            <div class="card-image">
-                                <img src="img/client-logo.png" class="card-img" alt="Client Logo">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Custom 1</p>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Apple</h5>
-                                <p class="card-text">1 Apple Way</p>
-                                <p class="card-text">Cupertino, CA 91234</p>
-                                <p class="card-text">(813) 597-8676</p>
-                            </div>
-                            <i class="fas fa-info-circle"></i>
-                        </div>
 
-                        <div class="card d-flex justify-content-center align-items-center">
-                            <div class="card-image">
-                                <img src="img/production-company-logo.png" class="card-img" alt="Production Company Logo">
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Custom 2</p>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Sypher Films</h5>
-                                <p class="card-text">5426 Flemish Ln.</p>
-                                <p class="card-text">Los Angeles, CA 90029</p>
-                                <p class="card-text">(813) 597-8676</p>
+
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Custom 3</p>
                             </div>
-                            <i class="fas fa-info-circle"></i>
+
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Custom 4</p>
+                            </div>
+
+                            <div class="icon-wrapper">
+                                <div class="icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <p>Custom 5</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Line <i class="fas fa-caret-down"></i></th>
-                                <th scope="col">Category Description</th>
-                                <th scope="col">Estimated</th>
-                                <th scope="col">Running</th>
-                                <th scope="col">Actual</th>
-                                <th scope="col">Variance</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>A</span>
-                                </th>
-                                <td class="category-description">Pre-Production | Wrap Labor</td>
-                                <td>$10,000</td>
-                                <td>$10,000</td>
-                                <td class="bg-dark">$10,000</td>
-                                <td>$10,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>B</span>
-                                </th>
-                                <td class="category-description">Shooting Labor</td>
-                                <td>$9,000</td>
-                                <td>$9,000</td>
-                                <td class="bg-dark">$9,000</td>
-                                <td>$9,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>C</span>
-                                </th>
-                                <td class="category-description">Pre-Production | Wrap Labor</td>
-                                <td>$7,000</td>
-                                <td>$7,000</td>
-                                <td class="bg-dark">$7,000</td>
-                                <td>$7,000</td>
-                            </tr>
-                        </tbody>
-
-                        <thead class="bg-teal">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Production Costs</th>
-                                <th scope="col">$56,750</th>
-                                <th scope="col">$56,750</th>
-                                <th scope="col">$56,750</th>
-                                <th scope="col">$56,750</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>D</span>
-                                </th>
-                                <td class="category-description">Director & Creative Fees</td>
-                                <td>$10,000</td>
-                                <td>$10,000</td>
-                                <td class="bg-dark">$10,000</td>
-                                <td>$10,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>E</span>
-                                </th>
-                                <td class="category-description">Talent Labor</td>
-                                <td>$20,000</td>
-                                <td>$20,000</td>
-                                <td class="bg-dark">$20,000</td>
-                                <td>$20,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>F</span>
-                                </th>
-                                <td class="category-description">Talent Expenses</td>
-                                <td>$1,5600</td>
-                                <td>$1,5600</td>
-                                <td class="bg-dark">$1,5600</td>
-                                <td>$1,5600</td>
-                            </tr>
-                        </tbody>
-
-                        <thead class="bg-purple">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Above the Line</th>
-                                <th scope="col">$48,560</th>
-                                <th scope="col">$48,560</th>
-                                <th scope="col">$48,560</th>
-                                <th scope="col">$48,560</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>G</span>
-                                </th>
-                                <td class="category-description">Post Production Labor</td>
-                                <td>$2,000</td>
-                                <td>$2,000</td>
-                                <td class="bg-dark">$2,000</td>
-                                <td>$2,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>H</span>
-                                </th>
-                                <td class="category-description">Editorial, Finishing & Post Production</td>
-                                <td>$1,000</td>
-                                <td>$1,000</td>
-                                <td class="bg-dark">$1,000</td>
-                                <td>$1,000</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>I</span>
-                                </th>
-                                <td class="category-description">Other</td>
-                                <td>$200</td>
-                                <td>$200</td>
-                                <td class="bg-dark">$200</td>
-                                <td>$200</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>J</span>
-                                </th>
-                                <td class="category-description">Other</td>
-                                <td>$4,000</td>
-                                <td>$4,000</td>
-                                <td class="bg-dark">$4,000</td>
-                                <td>$4,000</td>
-                            </tr>
-                        </tbody>
-
-                        <thead class="bg-red">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Post Production</th>
-                                <th scope="col">$7,200</th>
-                                <th scope="col">$7,200</th>
-                                <th scope="col">$7,200</th>
-                                <th scope="col">$7,200</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>K</span>
-                                </th>
-                                <td class="category-description">Insurance</td>
-                                <td>$2,000</td>
-                                <td>$2,000</td>
-                                <td class="bg-dark">$2,000</td>
-                                <td>$2,000</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <input type="checkbox" id="row1">
-                                    <span>L</span>
-                                </th>
-                                <td class="category-description">Production Fee</td>
-                                <td>$3,000</td>
-                                <td>$3,000</td>
-                                <td class="bg-dark">$3,000</td>
-                                <td>$3,000</td>
-                            </tr>
-
-                            <tr class="add-new-row">
-                                <th scope="row"><i class="fas fa-plus-circle"></i></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </tbody>
-
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Grand Total</th>
-                                <th scope="col">$1,300,000</th>
-                                <th scope="col">$1,290,000</th>
-                                <th scope="col">$1,260,000</th>
-                                <th scope="col" class="negative-variance">-$40,000</th>
-                            </tr>
-                        </thead>
-
-                    </table>
-                </div>
-            </div>
         </div>
+
+        <div class="overlay"></div>
 
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/scripts.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
     </body>
 </html>
