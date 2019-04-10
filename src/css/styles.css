@@ -7432,6 +7432,9 @@ a.text-purple:hover, a.text-purple:focus {
 a:hover {
   text-decoration: none; }
 
+[data-toggle='modal'] {
+  cursor: pointer; }
+
 .navbar {
   width: 100vw;
   left: calc(-1 * (100vw - 100%) / 2);
@@ -7595,6 +7598,80 @@ form label {
   font-weight: bold;
   color: #6c757d;
   margin-bottom: 0; }
+
+.modal .modal-content {
+  padding: 30px 50px; }
+
+.modal .modal-title {
+  font-size: 50px;
+  font-weight: 900; }
+
+#editCategory input[type="text"] {
+  padding-left: 0; }
+
+.color-picker label {
+  margin-bottom: 10px; }
+
+.color-picker .form-check {
+  padding-left: 0; }
+  .color-picker .form-check input[type="radio"] {
+    display: none; }
+    .color-picker .form-check input[type="radio"]:checked + label span {
+      transform: scale(1.25); }
+    .color-picker .form-check input[type="radio"]:checked + label .blue {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .indigo {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .purple {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .pink {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .red {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .orange {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .yellow {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .green {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .teal {
+      border: 2px solid #404152; }
+    .color-picker .form-check input[type="radio"]:checked + label .cyan {
+      border: 2px solid #404152; }
+  .color-picker .form-check label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer; }
+    .color-picker .form-check label:hover span {
+      transform: scale(1.25); }
+    .color-picker .form-check label span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: transform .2s ease-in-out; }
+      .color-picker .form-check label span.blue {
+        background: #007bff; }
+      .color-picker .form-check label span.indigo {
+        background: #6610f2; }
+      .color-picker .form-check label span.purple {
+        background: #797695; }
+      .color-picker .form-check label span.pink {
+        background: #e83e8c; }
+      .color-picker .form-check label span.red {
+        background: #E05F76; }
+      .color-picker .form-check label span.orange {
+        background: #fd7e14; }
+      .color-picker .form-check label span.yellow {
+        background: #ffc107; }
+      .color-picker .form-check label span.green {
+        background: #1ABC78; }
+      .color-picker .form-check label span.teal {
+        background: #00BFB2; }
+      .color-picker .form-check label span.cyan {
+        background: #17a2b8; }
 
 .signup header,
 .signin header {
