@@ -8,10 +8,11 @@
     }
 
     &.navbar-light .navbar-brand {
-        color: $gray-400;
+        color: $green;
 
         i {
             margin-right: 15px;
+            color: $gray-400;
         }
 
         span {

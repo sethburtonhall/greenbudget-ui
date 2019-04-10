@@ -139,17 +139,30 @@
     top: 0;
     right: 0;
     margin-left: 250px;
+
+    .navbar {
+        width: 100%;
+    }
 }
 
 .home {
 
+    .navbar button {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
     .container {
-        margin: 100px auto;
-        justify-content: center;
+        margin: 50px auto;
+        width: 100%;
 
         @include media-breakpoint-up(lg) {
-            margin: 300px 0 0 400px;
-            justify-content: start;
+            margin: 80px 0 0 300px;
+        }
+
+        @include media-breakpoint-only(lg) {
+            max-width: 677px;
         }
     }
 
@@ -159,26 +172,27 @@
         .header {
             font-size: 55px;
             font-weight: 900;
+            margin-bottom: 30px;
         }
 
         .icons {
-            flex-direction: column;
-
-            @include media-breakpoint-up(lg) {
-                flex-direction: row;
-            }
 
             .icon-wrapper {
+                margin-bottom: 20px;
                 text-align: center;
-                font-weight: bold;
+
+                p {
+                    font-weight: bold;
+                }
             }
 
             .icon {
                 background: $green;
-                width: 165px;
+                width: 100%;
                 height: 165px;
+                min-width: 165px;
                 padding: 45px;
-                margin-bottom: 15px;
+                margin: 0 auto 15px auto;
                 border-radius: 44px;
 
                 i {

@@ -3,12 +3,13 @@
 
 // Global
 @import "global";
-@import "home";
 @import "navbar";
 @import "table";
 @import "forms";
 
 // Layouts
 @import "signup";
+@import "home";
+@import "budgets";
 @import "budget";
 @import "purchase-orders";
