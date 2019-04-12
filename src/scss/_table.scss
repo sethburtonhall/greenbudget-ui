@@ -7,6 +7,61 @@
     thead {
         text-transform: uppercase;
         color: $white;
+
+        .dropdown {
+            top: 1px;
+
+            .dropdown-header {
+                font-weight: bold;
+                color: $dark;
+            }
+
+            .radio-form {
+                margin: 0 0 10px 25px;
+                text-transform: capitalize;
+
+                .form-check-input {
+                    margin-top: 0.2rem;
+                }
+
+                .form-check-label {
+                    font-weight: normal;
+                }
+            }
+
+            .btn {
+                color: $white;
+                padding: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:active,
+                &:focus,
+                &:not(:disabled):not(.disabled):active:focus, {
+                    box-shadow: none;
+                }
+            }
+
+            .dropdown-menu {
+                padding: 15px 0;
+
+                .dropdown-item {
+                    text-transform: capitalize;
+
+                    i {
+                        position: relative;
+                        top: -1px;
+                        font-size: 13px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
     }
 
     th[scope=row] {
@@ -83,5 +138,11 @@
 
     .thead-dark th.negative-variance {
         color: $red;
+    }
+
+    .add-new-row {
+        th[scope=row] {
+            border-bottom: none;
+        }
     }
 }

@@ -138,7 +138,52 @@
                     <table class="table table-bordered">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Line <i class="fas fa-caret-down"></i></th>
+                                <th scope="col">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Line
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <h6 class="dropdown-header">Line Grouping</h6>
+                                            <div class="radio-form">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios1" value="option1" checked>
+                                                  <label class="form-check-label" for="exampleRadios1">
+                                                    Letter Group
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios2" value="option2">
+                                                  <label class="form-check-label" for="exampleRadios2">
+                                                    Number Group
+                                                  </label>
+                                                </div>
+                                            </div>
+
+                                            <h6 class="dropdown-header">Line Number Format</h6>
+                                            <div class="radio-form">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="0000" value="option1" checked>
+                                                  <label class="form-check-label" for="0000">
+                                                    0000
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="00" value="option2">
+                                                  <label class="form-check-label" for="00">
+                                                    00
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="00-00" value="option2">
+                                                  <label class="form-check-label" for="00-00">
+                                                    00-00
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
                                 <th scope="col">Category Description</th>
                                 <th scope="col">Estimated</th>
                                 <th scope="col">Running</th>
@@ -186,7 +231,16 @@
                         <thead class="bg-teal">
                             <tr>
                                 <th scope="col"></th>
-                                <th scope="col" data-toggle="modal" data-target="#editCategory">Production Costs</th>
+                                <th scope="col">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Production Costs
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editCategory"><i class="far fa-edit"></i>Edit</a>
+                                        </div>
+                                    </div>
+                                </th>
                                 <th scope="col">$56,750</th>
                                 <th scope="col">$56,750</th>
                                 <th scope="col">$56,750</th>
@@ -233,7 +287,16 @@
                         <thead class="bg-purple">
                             <tr>
                                 <th scope="col"></th>
-                                <th scope="col">Above the Line</th>
+                                <th scope="col">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Above the Line
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editCategory"><i class="far fa-edit"></i>Edit</a>
+                                        </div>
+                                    </div>
+                                </th>
                                 <th scope="col">$48,560</th>
                                 <th scope="col">$48,560</th>
                                 <th scope="col">$48,560</th>
@@ -293,7 +356,16 @@
                         <thead class="bg-red">
                             <tr>
                                 <th scope="col"></th>
-                                <th scope="col">Post Production</th>
+                                <th scope="col">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Post Production
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editCategory"><i class="far fa-edit"></i>Edit</a>
+                                        </div>
+                                    </div>
+                                </th>
                                 <th scope="col">$7,200</th>
                                 <th scope="col">$7,200</th>
                                 <th scope="col">$7,200</th>

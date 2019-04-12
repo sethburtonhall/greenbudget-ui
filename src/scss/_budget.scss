@@ -12,6 +12,7 @@
 
         .card-deck {
             flex-direction: column;
+            width: 100%;
 
             @include media-breakpoint-up(lg) {
                 flex-direction: row;
@@ -23,7 +24,7 @@
                 margin-bottom: 15px;
 
                 @include media-breakpoint-up(md) {
-                    width: 495px;
+                    // width: 495px;
                 }
 
                 .card-body {
@@ -59,4 +60,11 @@
             }
         }
     }
+
+    .add-new-row {
+        th[scope=row] {
+            border-bottom: 1px solid $gray-300;
+        }
+    }
+
 }

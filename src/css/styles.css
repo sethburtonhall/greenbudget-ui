@@ -7425,7 +7425,7 @@ a.text-purple:hover, a.text-purple:focus {
     border-color: #dee2e6; } }
 
 .main {
-  width: 1545px;
+  width: auto;
   max-width: 1545px;
   margin: auto; }
 
@@ -7539,6 +7539,36 @@ a:hover {
   .table thead {
     text-transform: uppercase;
     color: #fff; }
+    .table thead .dropdown {
+      top: 1px; }
+      .table thead .dropdown .dropdown-header {
+        font-weight: bold;
+        color: #404152; }
+      .table thead .dropdown .radio-form {
+        margin: 0 0 10px 25px;
+        text-transform: capitalize; }
+        .table thead .dropdown .radio-form .form-check-input {
+          margin-top: 0.2rem; }
+        .table thead .dropdown .radio-form .form-check-label {
+          font-weight: normal; }
+      .table thead .dropdown .btn {
+        color: #fff;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: bold; }
+        .table thead .dropdown .btn:hover {
+          color: #fff; }
+        .table thead .dropdown .btn:active, .table thead .dropdown .btn:focus, .table thead .dropdown .btn:not(:disabled):not(.disabled):active:focus {
+          box-shadow: none; }
+      .table thead .dropdown .dropdown-menu {
+        padding: 15px 0; }
+        .table thead .dropdown .dropdown-menu .dropdown-item {
+          text-transform: capitalize; }
+          .table thead .dropdown .dropdown-menu .dropdown-item i {
+            position: relative;
+            top: -1px;
+            font-size: 13px;
+            margin-right: 5px; }
   .table th[scope=row] {
     position: relative;
     color: #adb5bd;
@@ -7582,6 +7612,32 @@ a:hover {
       border: none; }
   .table .thead-dark th.negative-variance {
     color: #E05F76; }
+  .table .add-new-row th[scope=row] {
+    border-bottom: none; }
+
+.table-basic form .form-row input {
+  border-radius: 0.6rem; }
+
+.table-basic h1 {
+  font-weight: 900; }
+
+.table-basic th[scope=row] {
+  text-align: center;
+  padding: .75rem; }
+  .table-basic th[scope=row]::before {
+    content: none; }
+
+.table-basic .actual-price {
+  text-align: right; }
+
+.table-basic .po-total {
+  font-weight: bold;
+  margin-top: 15px; }
+  .table-basic .po-total .total {
+    background: #fff;
+    padding: 1px 10px;
+    margin-left: 20px;
+    border-radius: 0.3rem; }
 
 form .header {
   margin-bottom: 40px; }
@@ -7947,7 +8003,8 @@ form label {
       text-align: left; } }
 
 .budget .budget-info .card-deck {
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%; }
   @media (min-width: 992px) {
     .budget .budget-info .card-deck {
       flex-direction: row; } }
@@ -7955,9 +8012,6 @@ form label {
     flex-direction: row;
     border: none;
     margin-bottom: 15px; }
-    @media (min-width: 768px) {
-      .budget .budget-info .card-deck .card {
-        width: 495px; } }
     .budget .budget-info .card-deck .card .card-body {
       padding: 0; }
       @media (max-width: 1199.98px) {
@@ -7979,20 +8033,5 @@ form label {
         .budget .budget-info .card-deck .card .fas {
           font-size: 35px; } }
 
-.purchase-order th[scope=row] {
-  text-align: center;
-  padding: .75rem; }
-  .purchase-order th[scope=row]::before {
-    content: none; }
-
-.purchase-order .actual-price {
-  text-align: right; }
-
-.purchase-order .po-total {
-  font-weight: bold;
-  margin-top: 15px; }
-  .purchase-order .po-total .total {
-    background: #fff;
-    padding: 1px 10px;
-    margin-left: 20px;
-    border-radius: 0.3rem; }
+.budget .add-new-row th[scope=row] {
+  border-bottom: 1px solid #dee2e6; }
