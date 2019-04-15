@@ -13,3 +13,36 @@ a {
 [data-toggle='modal'] {
     cursor: pointer;
 }
+
+.btn-plain {
+    background: transparent;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.btn:not(:disabled):not(.disabled):active:focus {
+        box-shadow: none;
+        color: $white;
+    }
+
+}
+
+.dropdown {
+
+    ul {
+        list-style: none;
+        padding-left: 15px;
+
+        i {
+            margin-right: 3px;
+        }
+    }
+}
+
+.badge {
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 3px 0;
+}

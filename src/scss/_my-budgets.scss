@@ -68,12 +68,16 @@
             }
         }
 
-        .fa-ellipsis-v {
+        .dropdown {
             position: absolute;
             right: 15px;
             top: 15px;
             color: white;
             cursor: pointer;
+
+            .btn-group .dropdown-toggle:after {
+                display: none;
+            }
         }
 
         .card-body {
