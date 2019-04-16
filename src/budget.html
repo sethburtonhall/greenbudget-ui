@@ -404,7 +404,6 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
                             </tr>
 
                         </tbody>
@@ -425,7 +424,7 @@
             </div>
         </div>
 
-        {# Modals #}
+        <!-- Modals -->
         <div class="modal fade" id="editCategoryTitle" tabindex="-1" role="dialog" aria-labelledby="editCategory" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
@@ -511,10 +510,7 @@
 
                                     <tbody>
                                         <tr>
-                                            <th scope="row">
-                                                <input type="checkbox" id="row1">
-                                                <span>1</span>
-                                            </th>
+                                            <th scope="row">1</th>
                                             <td class="category-description">Story Rights</td>
                                             <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                             <td>1</td>
@@ -524,10 +520,7 @@
                                             <td>$500</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">
-                                                <input type="checkbox" id="row1">
-                                                <span>2</span>
-                                            </th>
+                                            <th scope="row">2</th>
                                             <td class="category-description">1st Draft</td>
                                             <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                             <td>2</td>
@@ -537,10 +530,7 @@
                                             <td>$13,000</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">
-                                                <input type="checkbox" id="row1">
-                                                <span>3</span>
-                                            </th>
+                                            <th scope="row">3</th>
                                             <td class="category-description">Research</td>
                                             <td><span class="badge badge-pill badge-red">Jens Jacob</span></td>
                                             <td>1</td>
@@ -550,10 +540,7 @@
                                             <td>$650</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">
-                                                <input type="checkbox" id="row1">
-                                                <span>3</span>
-                                            </th>
+                                            <th scope="row">4</th>
                                             <td class="category-description">Overtime</td>
                                             <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                             <td>5</td>
@@ -575,6 +562,47 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="form-group">
+                                        <label for="category">Category</label>
+                                        <select class="form-control" id="category">
+                                            <option>Production Costs</option>
+                                            <option>Above the Line</option>
+                                            <option>Post Production</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="department">Department</label>
+                                        <select class="form-control" id="department">
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="totals d-flex flex-column">
+                                    <div class="d-flex justify-content-end">
+                                        <p><strong>Sub Total: </strong></p>
+                                        <p class="total">$2,500</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <p><strong>Fringes: </strong></p>
+                                        <p class="total">$2,500</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <p><strong>Estimated Total: </strong></p>
+                                        <p class="total">$2,500</p>
+                                    </div>
+                                </div>
                             </div>
 
                         </form>

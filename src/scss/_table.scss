@@ -62,13 +62,16 @@
             }
         }
 
+        tr th:first-child {
+            text-align: center;
+        }
     }
 
     th[scope=row] {
         position: relative;
         color: $gray-500;
         width: 75px;
-        padding-left: 30px;
+        text-align: center;
 
         &::before {
             font-family: "Font Awesome 5 Free";
@@ -78,11 +81,13 @@
             color: transparent;
             position: absolute;
             left: 5px;
+            cursor: pointer;
         }
 
         input[type=checkbox] {
             display: none;
             margin-top: 4px;
+            margin-left: 20px;
         }
     }
 
@@ -128,21 +133,25 @@
         }
     }
 
-    td.category-description {
+    td {
+        vertical-align: middle;
 
-        &:after {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 16px;
-            content: "\f337";
-            color: transparent;
-            float: right;
-            transform: rotate(135deg);
-        }
+        &.category-description {
 
-        &:hover:after {
-            cursor: pointer;
-            color: $gray-300;
+            &:after {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 16px;
+                content: "\f337";
+                color: transparent;
+                float: right;
+                transform: rotate(135deg);
+            }
+
+            &:hover:after {
+                cursor: pointer;
+                color: $gray-300;
+            }
         }
     }
 
@@ -161,8 +170,45 @@
     }
 
     .add-new-row {
+        cursor: pointer;
+
         th[scope=row] {
             border-bottom: none;
+
+            &:before {
+                content: '';
+            }
         }
+    }
+}
+
+.modal .table  {
+    border-radius: .6rem .6rem 0 0;
+
+    tbody {
+        border-right: 2px solid $gray-300;
+    }
+
+    th[scope=row] {
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .add-new-row th[scope="row"] {
+        border-bottom: 1px solid $gray-300;
+    }
+}
+
+.totals {
+    font-weight: bold;
+    margin-top: 15px;
+
+    .total {
+        background: $white;
+        padding: 1px 10px;
+        margin-left: 20px;
+        border-radius: $border-radius-lg;
     }
 }

@@ -4,7 +4,7 @@ form {
         margin-bottom: 40px;
     }
 
-    .form-control {
+    .form-control:not(select) {
         border: none;
         border-bottom: 1px solid $gray-300;
         box-shadow: none;

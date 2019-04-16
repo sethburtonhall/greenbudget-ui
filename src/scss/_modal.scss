@@ -1,7 +1,11 @@
 .modal {
 
     .modal-content {
-        padding: 30px 50px;
+            padding: 10px !important;
+
+        @include media-breakpoint-up(lg) {
+            padding: 30px 50px !important;
+        }
     }
 
     .modal-title {

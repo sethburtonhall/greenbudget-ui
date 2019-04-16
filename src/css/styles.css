@@ -8358,11 +8358,13 @@ a:hover {
             top: -1px;
             font-size: 13px;
             margin-right: 5px; }
+    .table thead tr th:first-child {
+      text-align: center; }
   .table th[scope=row] {
     position: relative;
     color: #adb5bd;
     width: 75px;
-    padding-left: 30px; }
+    text-align: center; }
     .table th[scope=row]::before {
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
@@ -8370,10 +8372,12 @@ a:hover {
       margin-right: 15px;
       color: transparent;
       position: absolute;
-      left: 5px; }
+      left: 5px;
+      cursor: pointer; }
     .table th[scope=row] input[type=checkbox] {
       display: none;
-      margin-top: 4px; }
+      margin-top: 4px;
+      margin-left: 20px; }
   .table .add-new-row th[scope=row] i {
     font-size: 20px; }
   .table tr:hover th[scope=row]::before {
@@ -8384,17 +8388,19 @@ a:hover {
     display: block; }
   .table tr td.multi-badge-inline {
     width: 225px; }
-  .table td.category-description:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 16px;
-    content: "\f337";
-    color: transparent;
-    float: right;
-    transform: rotate(135deg); }
-  .table td.category-description:hover:after {
-    cursor: pointer;
-    color: #dee2e6; }
+  .table td {
+    vertical-align: middle; }
+    .table td.category-description:after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 16px;
+      content: "\f337";
+      color: transparent;
+      float: right;
+      transform: rotate(135deg); }
+    .table td.category-description:hover:after {
+      cursor: pointer;
+      color: #dee2e6; }
   .table [class*="bg-"] {
     color: #fff;
     border: #404152;
@@ -8403,8 +8409,30 @@ a:hover {
       border: none; }
   .table .thead-dark th.negative-variance {
     color: #E05F76; }
-  .table .add-new-row th[scope=row] {
-    border-bottom: none; }
+  .table .add-new-row {
+    cursor: pointer; }
+    .table .add-new-row th[scope=row] {
+      border-bottom: none; }
+      .table .add-new-row th[scope=row]:before {
+        content: ''; }
+
+.modal .table {
+  border-radius: .6rem .6rem 0 0; }
+  .modal .table tbody {
+    border-right: 2px solid #dee2e6; }
+  .modal .table th[scope=row]::before {
+    content: none; }
+  .modal .table .add-new-row th[scope="row"] {
+    border-bottom: 1px solid #dee2e6; }
+
+.totals {
+  font-weight: bold;
+  margin-top: 15px; }
+  .totals .total {
+    background: #fff;
+    padding: 1px 10px;
+    margin-left: 20px;
+    border-radius: 0.3rem; }
 
 .table-basic form .form-row input {
   border-radius: 0.6rem; }
@@ -8421,19 +8449,10 @@ a:hover {
 .table-basic .actual-price {
   text-align: right; }
 
-.table-basic .po-total {
-  font-weight: bold;
-  margin-top: 15px; }
-  .table-basic .po-total .total {
-    background: #fff;
-    padding: 1px 10px;
-    margin-left: 20px;
-    border-radius: 0.3rem; }
-
 form .header {
   margin-bottom: 40px; }
 
-form .form-control {
+form .form-control:not(select) {
   border: none;
   border-bottom: 1px solid #dee2e6;
   box-shadow: none;
@@ -8447,7 +8466,10 @@ form label {
   margin-bottom: 0; }
 
 .modal .modal-content {
-  padding: 30px 50px; }
+  padding: 10px !important; }
+  @media (min-width: 992px) {
+    .modal .modal-content {
+      padding: 30px 50px !important; } }
 
 .modal .modal-title {
   font-size: 50px;
