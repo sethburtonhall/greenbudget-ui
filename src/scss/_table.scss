@@ -62,8 +62,11 @@
             }
         }
 
-        tr th:first-child {
-            text-align: center;
+        tr {
+
+            th:first-child {
+                text-align: center;
+            }
         }
     }
 
@@ -87,12 +90,7 @@
         input[type=checkbox] {
             display: none;
             margin-top: 4px;
-            margin-left: 20px;
         }
-    }
-
-    .add-new-row th[scope=row] i {
-        font-size: 20px;
     }
 
     tr {
@@ -128,6 +126,18 @@
         //     white-space: nowrap;
         // }
 
+        &.highlight {
+            background-color: lighten($blue, 45);
+        }
+
+        &.borderless {
+
+            th,
+            td {
+                border: 0;
+            }
+        }
+
         td.multi-badge-inline {
             width: 225px;
         }
@@ -152,7 +162,24 @@
                 cursor: pointer;
                 color: $gray-300;
             }
+
+            a {
+                color: $body-color;
+            }
         }
+    }
+
+    th,
+    td:not(.category-description) {
+        text-align: right;
+    }
+
+    th[scope=col] {
+        text-align: left;
+    }
+
+    .add-new-row th[scope=row] i {
+        font-size: 20px;
     }
 
     [class*="bg-"] {

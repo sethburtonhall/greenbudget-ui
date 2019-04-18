@@ -83,16 +83,16 @@
             width: auto;
             margin: auto;
         }
-    }
 
-    .breadcrumb {
-        background-color: transparent;
+        .breadcrumb {
+            background-color: transparent;
 
-        .breadcrumb-item::before {
-            display: inline-block;
-            padding-right: 0.5rem;
-            color: #6c757d;
-            content: "/";
+            .breadcrumb-item::before {
+                display: inline-block;
+                padding-right: 0.5rem;
+                color: #6c757d;
+                content: "/";
+            }
         }
     }
 

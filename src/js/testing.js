@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     $('#dismiss, .overlay').on('click', function () {
         $('#sidebar').removeClass('active');
         $('.overlay').removeClass('active');
@@ -16,5 +14,13 @@ $(document).ready(function () {
     // $('#mainTable').DataTable();
     // $('#subTable').DataTable();
 
-
+    // highlight table row when checked
+    $("input[type='checkbox']").on('click', function () {
+        if($(this).prop('checked', true)){
+            console.log('test');
+            $(this).closest('tr').addClass('highlight');
+        } else{
+            $(this).closest('tr').removeClass('highlight');
+        }
+    });
 });

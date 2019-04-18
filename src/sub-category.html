@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Greenbudget</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><i class="fas fa-home"></i> green<span>budget</span> </a>
+
+                <!-- <div class="spinner-border spinner-border-sm" role="status">
+                    <span class="sr-only">Changes Saved</span>
+                </div>
+                <strong class="spinner-status">Changes Saved</strong> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fringes
+                            <i class="fas fa-percent"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Actual
+                            <i class="fas fa-dollar-sign"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Export
+                            <i class="fas fa-file-export"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings
+                            <i class="fas fa-cog"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link avatar" href="#">
+                                <img src="img/avatar.png" alt="Avatar">
+                                Seth Hall
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sub-navbar d-flex justify-content-between">
+                <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex align-items-center">
+                        <li class="breadcrumb-item"><a href="#">Top Sheet</a></li>
+                        <li class="breadcrumb-item"><a href="#">Production Costs</a></li>
+                        <li class="breadcrumb-item">
+                            <a class="btn btn-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development Costs</a>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-light active">
+                        <input type="checkbox" autocomplete="off" checked>
+                        Estimated
+                    </label>
+
+                    <label class="btn btn-light">
+                        <input type="checkbox" autocomplete="off">
+                        Running
+                    </label>
+
+                    <label class="btn btn-light">
+                        <input type="checkbox" autocomplete="off">
+                        Actual
+                    </label>
+
+                    <label class="btn btn-light">
+                        <input type="checkbox" autocomplete="off">
+                        Details
+                    </label>
+                </div>
+            </div>
+
+            <div class="main budget">
+                <div id='subTable' class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-teal">
+                            <tr>
+                                <th scope="col">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            A
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <h6 class="dropdown-header">Line Grouping</h6>
+                                            <div class="radio-form">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios1" value="option1" checked>
+                                                  <label class="form-check-label" for="exampleRadios1">
+                                                    Letter Group
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios2" value="option2">
+                                                  <label class="form-check-label" for="exampleRadios2">
+                                                    Number Group
+                                                  </label>
+                                                </div>
+                                            </div>
+
+                                            <h6 class="dropdown-header">Line Number Format</h6>
+                                            <div class="radio-form">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="0000" value="option1" checked>
+                                                  <label class="form-check-label" for="0000">
+                                                    0000
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="00" value="option2">
+                                                  <label class="form-check-label" for="00">
+                                                    00
+                                                  </label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="lineNumberFormat" id="00-00" value="option2">
+                                                  <label class="form-check-label" for="00-00">
+                                                    00-00
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col">Pre-Production / Wrap Labor</th>
+                                </th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Unit</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">Fringes</th>
+                                <th scope="col">Estimated</th>
+                                <th scope="col" class="bg-dark">Actual</th>
+                                <th scope="col">Days</th>
+                                <th scope="col">Rate</th>
+                                <th scope="col">O/T</th>
+                                <th scope="col">FR%</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <input class="mx-auto" type="checkbox" id="row1">
+                                    <span>01</span>
+                                </th>
+                                <td class="category-description" data-toggle="modal" data-target="#editCategory">Supervising Producer</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>$2,500</td>
+                                <td class="bg-dark">$2,500</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <input class="mx-auto" type="checkbox" id="row1">
+                                    <span>02</span>
+                                </th>
+                                <td class="category-description" data-toggle="modal" data-target="#editCategory">Line Producer</td>
+                                <td><span class="badge badge-pill badge-purple">Jens Jacob</span></td>
+                                <td>5</td>
+                                <td><span class="badge badge-pill badge-red">Days</span></td>
+                                <td>$500</td>
+                                <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
+                                <td>$3,250</td>
+                                <td class="bg-dark">$3,250</td>
+                                <td>5</td>
+                                <td>$500</td>
+                                <td>2</td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <input class="mx-auto" type="checkbox" id="row1">
+                                    <span>03</span>
+                                </th>
+                                <td class="category-description" data-toggle="modal" data-target="#editCategory">Director of Photography</td>
+                                <td></td>
+                                <td>10</td>
+                                <td><span class="badge badge-pill badge-green">Weeks</span></td>
+                                <td>$1000</td>
+                                <td></td>
+                                <td>$13,000</td>
+                                <td class="bg-dark">$13,000</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <input class="mx-auto" type="checkbox" id="row1">
+                                    <span>04</span>
+                                </th>
+                                <td class="category-description" data-toggle="modal" data-target="#editCategory">Second Camera Operator</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-dark"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <input class="mx-auto" type="checkbox" id="row1">
+                                    <span>05</span>
+                                </th>
+                                <td class="category-description" data-toggle="modal" data-target="#editCategory">1st AC</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-dark"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="add-new-row">
+                                <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-dark"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <thead class="bg-gray">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+
+                            <tr class="borderless">
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Sub Total</td>
+                                <td>$15,000</td>
+                                <td class="bg-dark">$15,000</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="editCategory" tabindex="-1" role="dialog" aria-labelledby="editCategory" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <form>
+                            <div class="form-group">
+                                <label for="category-name" class="col-form-label">Category Name</label>
+                                <input type="text" class="form-control form-control-lg" id="category-name" placeholder="Supervising Producer">
+                            </div>
+
+                            <div id='subTable' class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="bg-teal">
+                                        <tr>
+                                            <th scope="col">01</th>
+                                            <th scope="col">Description</th>
+                                            </th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Rate</th>
+                                            <th scope="col">Fringes</th>
+                                            <th scope="col">Estimated</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td class="category-description">Story Rights</td>
+                                            <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                            <td>1</td>
+                                            <td><span class="badge badge-pill badge-yellow">Flat</span></td>
+                                            <td>$10</td>
+                                            <td></td>
+                                            <td>$500</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td class="category-description">1st Draft</td>
+                                            <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                            <td>2</td>
+                                            <td><span class="badge badge-pill badge-red">Days</span></td>
+                                            <td>$650</td>
+                                            <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
+                                            <td>$13,000</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td class="category-description">Research</td>
+                                            <td><span class="badge badge-pill badge-red">Jens Jacob</span></td>
+                                            <td>1</td>
+                                            <td><span class="badge badge-pill badge-green">Weeks</span></td>
+                                            <td>$1,000</td>
+                                            <td></td>
+                                            <td>$650</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td class="category-description">Overtime</td>
+                                            <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                            <td>5</td>
+                                            <td><span class="badge badge-pill badge-blue">Hours</span></td>
+                                            <td>$500</td>
+                                            <td></td>
+                                            <td>$50</td>
+                                        </tr>
+
+                                        <tr class="add-new-row">
+                                            <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="form-group">
+                                        <label for="category">Category</label>
+                                        <select class="form-control" id="category">
+                                            <option>Production Costs</option>
+                                            <option>Above the Line</option>
+                                            <option>Post Production</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="department">Department</label>
+                                        <select class="form-control" id="department">
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                            <option>Production</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="totals d-flex flex-column">
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <p>Sub Total:</p>
+                                        <p class="total">$2,500</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <p>Fringes:</p>
+                                        <p class="total">$2,500</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <p><strong>Estimated Total: </strong></p>
+                                        <p class="total"><strong>$2,500</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="/js/testing.js"></script>
+    </body>
+</html>
