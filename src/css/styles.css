@@ -8426,13 +8426,15 @@ a:hover {
     border-bottom: 1px solid #dee2e6; }
 
 .totals {
+  text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px; }
   .totals .total {
     background: #fff;
     padding: 1px 10px;
     margin-left: 20px;
-    border-radius: 0.3rem; }
+    border-radius: 0.3rem;
+    border: 2px solid #dee2e6; }
 
 .table-basic form .form-row input {
   border-radius: 0.6rem; }

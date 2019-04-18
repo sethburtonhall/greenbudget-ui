@@ -202,6 +202,7 @@
 }
 
 .totals {
+    text-transform: uppercase;
     font-weight: bold;
     margin-top: 15px;
 
@@ -210,5 +211,6 @@
         padding: 1px 10px;
         margin-left: 20px;
         border-radius: $border-radius-lg;
+        border: 2px solid $gray-300;
     }
 }
