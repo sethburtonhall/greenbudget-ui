@@ -17,11 +17,6 @@ gulp.task('js', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('copy', function () {
-    gulp.src('./src/**/*')
-        .pipe(gulp.dest('./docs/'));
-});
-
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
@@ -33,4 +28,4 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['js', 'copy', 'serve']);
+gulp.task('default', ['js', 'serve']);
