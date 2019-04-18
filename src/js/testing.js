@@ -13,8 +13,8 @@ $(document).ready(function () {
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
 
-    $('#mainTable').DataTable();
-    $('#subTable').DataTable();
+    // $('#mainTable').DataTable();
+    // $('#subTable').DataTable();
 
 
 });
