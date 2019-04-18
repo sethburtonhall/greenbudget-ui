@@ -1,0 +1,216 @@
+.table {
+    background: $white;
+    border-collapse: collapse;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    thead {
+        text-transform: uppercase;
+        color: $white;
+
+        .dropdown {
+            top: 1px;
+
+            .dropdown-header {
+                font-weight: bold;
+                color: $dark;
+            }
+
+            .radio-form {
+                margin: 0 0 10px 25px;
+                text-transform: capitalize;
+
+                .form-check-input {
+                    margin-top: 0.2rem;
+                }
+
+                .form-check-label {
+                    font-weight: normal;
+                }
+            }
+
+            .btn {
+                color: $white;
+                padding: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:active,
+                &:focus,
+                &:not(:disabled):not(.disabled):active:focus, {
+                    box-shadow: none;
+                }
+            }
+
+            .dropdown-menu {
+                padding: 15px 0;
+
+                .dropdown-item {
+                    text-transform: capitalize;
+
+                    i {
+                        position: relative;
+                        top: -1px;
+                        font-size: 13px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        tr th:first-child {
+            text-align: center;
+        }
+    }
+
+    th[scope=row] {
+        position: relative;
+        color: $gray-500;
+        width: 75px;
+        text-align: center;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f58e";
+            margin-right: 15px;
+            color: transparent;
+            position: absolute;
+            left: 5px;
+            cursor: pointer;
+        }
+
+        input[type=checkbox] {
+            display: none;
+            margin-top: 4px;
+            margin-left: 20px;
+        }
+    }
+
+    .add-new-row th[scope=row] i {
+        font-size: 20px;
+    }
+
+    tr {
+
+        &:hover {
+
+            th[scope=row] {
+
+                &::before {
+                    color: $gray-300;
+                }
+
+                span {
+                    display: none;
+                }
+
+                input[type=checkbox] {
+                    display: block;
+                }
+            }
+        }
+
+        // td.multi-badge-inline {
+        //     max-width: 17px;
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     max-width: 250px;
+        //     overflow: scroll;
+        //     overflow-y: hidden;
+        //     overflow: auto;
+        //     text-overflow: ellipsis;
+        //     white-space: nowrap;
+        // }
+
+        td.multi-badge-inline {
+            width: 225px;
+        }
+    }
+
+    td {
+        vertical-align: middle;
+
+        &.category-description {
+
+            &:after {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 16px;
+                content: "\f337";
+                color: transparent;
+                float: right;
+                transform: rotate(135deg);
+            }
+
+            &:hover:after {
+                cursor: pointer;
+                color: $gray-300;
+            }
+        }
+    }
+
+    [class*="bg-"] {
+        color: $white;
+        border: $dark;
+        border: none;
+
+        th {
+            border: none;
+        }
+    }
+
+    .thead-dark th.negative-variance {
+        color: $red;
+    }
+
+    .add-new-row {
+        cursor: pointer;
+
+        th[scope=row] {
+            border-bottom: none;
+
+            &:before {
+                content: '';
+            }
+        }
+    }
+}
+
+.modal .table  {
+    border-radius: .6rem .6rem 0 0;
+
+    tbody {
+        border-right: 2px solid $gray-300;
+    }
+
+    th[scope=row] {
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .add-new-row th[scope="row"] {
+        border-bottom: 1px solid $gray-300;
+    }
+}
+
+.totals {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px;
+
+    .total {
+        background: $white;
+        padding: 1px 10px;
+        margin-left: 20px;
+        border-radius: $border-radius-lg;
+        border: 2px solid $gray-300;
+    }
+}

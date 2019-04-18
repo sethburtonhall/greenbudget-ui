@@ -1,0 +1,15 @@
+.modal {
+
+    .modal-content {
+            padding: 10px !important;
+
+        @include media-breakpoint-up(lg) {
+            padding: 30px 50px !important;
+        }
+    }
+
+    .modal-title {
+        font-size: 50px;
+        font-weight: 900;
+    }
+}

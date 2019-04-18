@@ -1,0 +1,29 @@
+.table-basic {
+
+    form {
+
+        .form-row {
+
+            input {
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 900;
+    }
+
+    th[scope=row] {
+        text-align: center;
+        padding: .75rem;
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .actual-price {
+        text-align: right;
+    }
+}

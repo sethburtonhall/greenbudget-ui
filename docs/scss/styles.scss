@@ -1,0 +1,17 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Global
+@import "global";
+@import "navbar";
+@import "table";
+@import "table-basic";
+@import "forms";
+@import "modal";
+@import "edit-category";
+
+// Layouts
+@import "signup";
+@import "home";
+@import "my-budgets";
+@import "budget";
