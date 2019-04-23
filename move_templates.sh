@@ -1,0 +1,1 @@
+cp src/*.html ./../greenbudget2/backend/greenbudget/templates/greenbudget/
