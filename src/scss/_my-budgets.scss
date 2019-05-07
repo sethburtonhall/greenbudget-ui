@@ -1,10 +1,25 @@
 .budgets {
 
     .container {
+        max-width: 1364px;
+        margin: 0;
 
-        @include media-breakpoint-only(lg) {
-            max-width: 727px;
-            margin-left: 250px;
+        @include media-breakpoint-up(lg) {
+            padding-left: 265px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-left: 313px;
+        }
+
+        .col-6 {
+            padding-right: 5px;
+            padding-left: 5px;
+
+            @include media-breakpoint-up(md) {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
         }
     }
 
@@ -50,6 +65,7 @@
     .card {
         border-radius: 14px;
         margin-bottom: 35px;
+        max-width: 424px;
 
         .production-company {
             position: absolute;
@@ -84,14 +100,29 @@
             background-color: $dark;
             color: $white;
             border-radius: 0 0 14px 14px;
-            padding: 15px;
+            padding: 10px 14px;
+
+            @include media-breakpoint-up(sm) {
+                padding: 15px;
+            }
+
+            h5 {
+
+                @include media-breakpoint-only(xs) {
+                    font-size: 14px;
+                }
+            }
 
             .card-title {
                 margin: 0;
             }
 
             .card-text.small {
-                font-size: 12px;
+                font-size: 10px;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 12px;
+                }
             }
         }
     }

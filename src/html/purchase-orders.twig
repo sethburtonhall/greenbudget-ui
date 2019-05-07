@@ -1,0 +1,118 @@
+{% extends "../templates/layout.twig" %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> green<span>budget</span> </a>
+
+    <!-- <div class="spinner-border spinner-border-sm" role="status">
+        <span class="sr-only">Changes Saved</span>
+    </div>
+    <strong class="spinner-status">Changes Saved</strong> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Fringes
+                <i class="fas fa-percent"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Actual
+                <i class="fas fa-dollar-sign"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Export
+                <i class="fas fa-file-export"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Settings
+                <i class="fas fa-cog"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link avatar" href="#">
+                    <img src="img/avatar.png" alt="Avatar">
+                    Jens Jacob
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="sub-navbar d-flex justify-content-end">
+        <div class="button-group">
+            <button type="button" class="btn btn-dark">
+                New PO <i class="fas fa-plus"></i>
+            </button>
+            <button type="button" class="btn btn-dark">Import</button>
+            <button type="button" class="btn btn-dark">Export</button>
+        </div>
+    </div>
+
+    <div class="main table-basic">
+        <h1 class="purchase-order-title">Purchase Orders</h1>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Line <i class="fas fa-caret-down"></i></th>
+                        <th scope="col">Line Description</th>
+                        <th scope="col">Vendor</th>
+                        <th scope="col">PO</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Paid</th>
+                        <th scope="col">Actual</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1001</th>
+                        <td>Post Producer</td>
+                        <td>Jens Jacob</td>
+                        <td>#4320</td>
+                        <td>11/13/2018</td>
+                        <td class="text-success">Yes</td>
+                        <td class="actual-price">$900</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3490</th>
+                        <td>Designer</td>
+                        <td>Byron Slaybaugh</td>
+                        <td>#4321</td>
+                        <td>11/13/2018</td>
+                        <td class="text-success">Yes</td>
+                        <td class="actual-price">$800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2300</th>
+                        <td>Offline Editor</td>
+                        <td>Michael Papavero</td>
+                        <td>#4322</td>
+                        <td>11/13/2018</td>
+                        <td class="text-danger">No</td>
+                        <td class="actual-price">$15,000</td>
+                    </tr>
+
+                    <tr class="add-new-row">
+                        <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="totals d-flex justify-content-end align-items-center">
+            <p><strong>PO Total: </strong></p>
+            <p class="total">$2,500</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

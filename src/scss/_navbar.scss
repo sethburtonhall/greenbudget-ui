@@ -1,45 +1,58 @@
 .navbar {
-    width: 100vw;
-    left: calc(-1 * (100vw - 100%) / 2);
-    padding: .5rem 1.6rem;
+    justify-content: space-between;
 
     @include media-breakpoint-up(md) {
         padding: .5rem 2rem;
     }
 
-    &.navbar-light .navbar-brand {
-        color: $green;
+    .input-search {
+        margin: 20px 0;
+        width: 100%;
 
-        i {
-            margin-right: 15px;
-            color: $gray-400;
+        @include media-breakpoint-up(lg) {
+            width: 40%;
+            margin: 0 0 0 20px;
         }
 
-        span {
-            color: $gray-500;
+        @include media-breakpoint-up(xl) {
+            width: 25%;
+            margin: 0 0 0 20px;
         }
     }
 
-    .spinner-border {
-        margin-left: 50px;
-        margin-right: 10px;
-        border-width: 0.1em;
+    .spinner {
+        .spinner-border {
+            margin-left: 50px;
+            margin-right: 10px;
+            border-width: 0.1em;
+        }
+
+        .spinner-status {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: normal;
+        }
     }
 
-    .spinner-status {
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: normal;
+    .logo {
+
+        svg {
+            width: 150px;
+        }
     }
 
     .navbar-nav {
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 25px;
+        }
 
         .nav-item {
 
             .nav-link {
                 color: $body-color;
-                text-transform: uppercase;
                 margin-right: 10px;
+                padding: 0;
 
                 &:last-child {
                     margin-right: 0;
@@ -50,10 +63,10 @@
                     font-size: $font-size-md;
                     padding: 0;
 
-                    img {
+                    svg {
                         vertical-align: middle;
-                        width: 43px;
-                        height: 43px;
+                        width: 60px;
+                        height: 60px;
                         border-radius: 50%;
                         border: 3px solid $white;
                     }
@@ -81,11 +94,11 @@
 
         @include media-breakpoint-down(sm) {
             width: auto;
-            margin: auto;
         }
 
         .breadcrumb {
             background-color: transparent;
+            padding-left: 0;
 
             .breadcrumb-item::before {
                 display: inline-block;
@@ -108,6 +121,8 @@
         .btn.btn-light {
             margin-right: 5px;
             border-radius: $btn-border-radius-lg;
+            min-width: 100px;
+            font-size: 14px;
 
             &:last-child {
                 margin: 0;
