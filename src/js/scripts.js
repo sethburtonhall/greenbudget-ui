@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-    });
+    // $("#sidebar").mCustomScrollbar({
+    //     theme: "minimal",
+    //     setHeight: "100%"
+    // });
 
     $('#dismiss, .overlay').on('click', function () {
         $('#sidebar').removeClass('active');

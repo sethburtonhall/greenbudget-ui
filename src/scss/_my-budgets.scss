@@ -1,71 +1,102 @@
 .budgets {
 
-    .container {
-        max-width: 1364px;
-        margin: 0;
-
-        @include media-breakpoint-up(lg) {
-            padding-left: 265px;
-        }
-
-        @include media-breakpoint-up(xl) {
-            padding-left: 313px;
-        }
-
-        .col-6 {
-            padding-right: 5px;
-            padding-left: 5px;
-
-            @include media-breakpoint-up(md) {
-                padding-right: 15px;
-                padding-left: 15px;
-            }
-        }
-    }
-
     .navbar {
 
         @include media-breakpoint-up(lg) {
             padding-left: 280px;
             justify-content: space-between;
         }
+    }
 
-        button {
+    .container {
+        max-width: 1650px;
+    }
 
-            &#sidebarCollapse {
+    .action-bar {
+        margin-bottom: $spacer;
+
+        .btn-group {
+
+            .fas {
+                position: relative;
+                top: 5px;
 
                 @include media-breakpoint-up(lg) {
-                    display: none;
+                    top: -1px;
+                    margin-left: 5px;
+                }
+
+                &.fa-plus {
+                    font-size: 12px;
+                }
+
+                &.fa-caret-down {
+                    font-size: 16px;
                 }
             }
 
-            &.btn-success {
+            .btn {
+                width: auto;
+                min-width: auto;
+                margin-right: 10px;
 
-                span {
-                    margin-right: 10px;
+                @include media-breakpoint-down(md) {
+                    border-radius: 100px;
+                    width: 35px;
+                    height: 35px;
+                    padding: 0;
+                }
+            }
 
-                    @include media-breakpoint-down(md) {
-                        display: none;
+            .dropdown-toggle {
+                margin-right: 0;
+                border: 1px solid $dark;
+
+                &:active {
+                    rect {
+                        fill: $white;
                     }
                 }
 
-                i {
-                    font-size: 12px;
+                &:after {
+                    content: none;
+                }
+
+                svg {
+                    width: 15px;
+                }
+
+                rect {
+                    fill: $dark;
                 }
             }
-        }
 
-        .header {
-            font-size: 32px;
-            font-weight: 900;
-            margin: 0;
+            &.show .dropdown-toggle {
+                rect {
+                    fill: $white;
+                }
+            }
         }
     }
 
     .card {
         border-radius: 14px;
         margin-bottom: 35px;
-        max-width: 424px;
+
+        @include media-breakpoint-up(xl) {
+            width: 424px;
+        }
+
+        .card-img-top {
+
+            @include media-breakpoint-up(xl) {
+                min-height: 224px;
+            }
+        }
+
+        img {
+            object-fit: cover;
+        }
 
         .production-company {
             position: absolute;

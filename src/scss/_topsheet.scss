@@ -1,92 +1,102 @@
-.budget {
+.topsheet {
 
-    .budget-title {
-        text-align: center;
-        font-weight: bold;
+    .container {
 
         @include media-breakpoint-up(lg) {
-            text-align: left;
+            padding-left: 90px;
+            margin: auto;
         }
     }
 
-    .budget-info {
+    .budget {
 
-        .card-deck {
-            margin-bottom: 15px;
+        .budget-title {
+            text-align: center;
+            font-weight: bold;
 
-            @include media-breakpoint-down(md) {
-                overflow-x: auto;
-                white-space: nowrap;
-                display: block;
+            @include media-breakpoint-up(lg) {
+                text-align: left;
             }
+        }
 
-            .col {
-                display: inline-block;
-                float: none;
-            }
+        .budget-info {
 
-            .card {
-                flex-direction: row;
-                border: none;
-                margin: 0 0 15px 0;
-                padding: 5px;
-                min-height: 120px;
+            .card-deck {
+                margin-bottom: 15px;
 
-                @include media-breakpoint-up(lg) {
-                    padding: 10px;
+                @include media-breakpoint-down(md) {
+                    overflow-x: auto;
+                    white-space: nowrap;
+                    display: block;
                 }
 
-                .card-body {
-                    padding: 0;
-                    margin-left: 10px;
+                .col {
+                    display: inline-block;
+                    float: none;
+                }
 
-                    @include media-breakpoint-down(lg) {
-                        font-size: 16px;
+                .card {
+                    flex-direction: row;
+                    border: none;
+                    margin: 0 0 15px 0;
+                    padding: 5px;
+                    min-height: 120px;
+
+                    @include media-breakpoint-up(lg) {
+                        padding: 10px;
                     }
 
-                    .card-title {
-                        font-weight: 900;
-                        margin: 0;
+                    .card-body {
+                        padding: 0;
+                        margin-left: 10px;
 
                         @include media-breakpoint-down(lg) {
-                            font-size: 14px;
+                            font-size: 16px;
+                        }
+
+                        .card-title {
+                            font-weight: 900;
+                            margin: 0;
+
+                            @include media-breakpoint-down(lg) {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .card-text {
+                            margin-bottom: 0;
+                            line-height: 1.2;
+
+                            @include media-breakpoint-down(lg) {
+                                font-size: 12px;
+                            }
                         }
                     }
 
-                    .card-text {
-                        margin-bottom: 0;
-                        line-height: 1.2;
+                    .fa-info-circle {
+                        color: $gray-300;
+                        padding: 20px;
+                        font-size: 20px;
 
-                        @include media-breakpoint-down(lg) {
-                            font-size: 12px;
+                        @include media-breakpoint-up(xl) {
+                            visibility: hidden;
                         }
                     }
-                }
 
-                .fa-info-circle {
-                    color: $gray-300;
-                    padding: 20px;
-                    font-size: 20px;
+                    &:hover .fa-info-circle {
 
-                    @include media-breakpoint-up(xl) {
-                        visibility: hidden;
-                    }
-                }
-
-                &:hover .fa-info-circle {
-
-                    @include media-breakpoint-up(xl) {
-                        visibility: visible;
+                        @include media-breakpoint-up(xl) {
+                            visibility: visible;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .add-new-row {
-        th[scope=row] {
-            border-bottom: 1px solid $gray-300;
+        .add-new-row {
+            th[scope=row] {
+                border-bottom: 1px solid $gray-300;
+            }
         }
     }
-
 }
