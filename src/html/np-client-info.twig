@@ -1,0 +1,90 @@
+{% extends "../templates/layout.twig" %}
+
+{% block content %}
+<div class="wrapper">
+
+    {% include "../templates/partials/sidebar.twig" %}
+
+    <!-- Page Content  -->
+    <div id="content" class="new-project">
+        <div class="container">
+            <form>
+                <h1 class="header">Client/Agency Info</h1>
+                <div class="form-row">
+                    <div class="col-xl-7 pr-xl-10">
+                        <div class="form-group row">
+                            <label for="client" class="col-sm-3 col-form-label">Client/Agency:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="client">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address" class="col-sm-3 col-form-label">Address:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="address">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-3 col-form-label">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="phone" class="col-sm-3 col-form-label">Phone:</label>
+                            <div class="col-sm-9">
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="producer" class="col-sm-3 col-form-label">Agency Producer:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="producer">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="director" class="col-sm-3 col-form-label">Creative Director:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="director">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="other" class="col-sm-3 col-form-label">Other:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="other">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-5 pl-xl-4">
+                        <div class="form-group row h-100">
+                            <label for="uploadImage" class="col-sm-3 col-form-label d-block d-xl-none">Project Image:</label>
+                            <div class="col-sm-9 col-xl-12 image-upload-alt">
+                                <label for="uploadImage">
+                                    <img src="img/upload-image-2.svg" alt="Upload an Image">
+                                    <p id="emailHelp" class="form-text text-muted text-center">Upload a Logo</p>
+                                </label>
+                                <input type="file" class="form-control-file" id="uploadImage">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <a class="btn btn-light btn-border" href="np-production-info.html" role="button">Back</a>
+                        <a class="btn btn-dark" href="np-client-info.html" role="button">Next</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="overlay"></div>
+{% endblock %}

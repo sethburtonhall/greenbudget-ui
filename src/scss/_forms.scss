@@ -2,20 +2,30 @@ form {
 
     .header {
         margin-bottom: 40px;
+        font-weight: 900;
+    }
+
+    .form-group.row {
+        margin-bottom: 1.5rem;
     }
 
     .form-control:not(select) {
+        background-color: $gray;
         border: none;
-        border-bottom: 1px solid $gray-300;
+        // border-bottom: 1px solid $gray-300;
         box-shadow: none;
-        border-radius: 0;
+        border-radius: 13px;
     }
 
     label {
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-size: 12px;
         font-weight: bold;
         color: $gray-600;
         margin-bottom: 0;
+    }
+
+    .btn {
+        min-width: 100px;
     }
 }
