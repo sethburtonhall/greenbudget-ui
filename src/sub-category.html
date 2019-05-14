@@ -14,301 +14,343 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><i class="fas fa-home"></i> green<span>budget</span> </a>
+    <div class="wrapper">
 
-        <!-- <div class="spinner-border spinner-border-sm" role="status">
-        <span class="sr-only">Changes Saved</span>
-    </div>
-    <strong class="spinner-status">Changes Saved</strong> -->
+        <nav id="sidebar" class="sidebar-alt">
+            <div class="sidebar-header">
+                <div class="home">
+                    <a href="index.html">
+                        <img src="/img/logo.svg" alt="Greenbudget Logo" class="d-inline d-lg-none">
+                        <img src="/img/logo-alt.svg" alt="Greenbudget Logo" class="d-none d-lg-inline">
+                    </a>
+                </div>
+            </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="np-project-info.html" class="d-flex align-items-center"><img src="/img/icons/new-project.svg" onload="SVGInject(this)" alt="New Project Icon"><span class="d-block d-lg-none">New Project</span></a>
+                </li>
+                <li>
+                    <a href="my-budgets.html" class="d-flex align-items-center"><img src="/img/icons/my-budgets.svg" onload="SVGInject(this)" alt="My Budgets Icon"><span class="d-block d-lg-none">My Budgets</span></a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex align-items-center"><img src="/img/icons/contacts.svg" onload="SVGInject(this)" alt="Contacts Icon"><span class="d-block d-lg-none">Contacts</span></a>
+                </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Fringes
-                        <i class="fas fa-percent"></i>
-                    </a>
+                <hr />
+
+                <li>
+                    <a href="index.html" class="d-flex align-items-center"><img src="/img/icons/budget.svg" onload="SVGInject(this)" alt="New Project Icon"><span class="d-block d-lg-none">Budget</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Actual
-                        <i class="fas fa-dollar-sign"></i>
-                    </a>
+                <li>
+                    <a href="my-budgets.html" class="d-flex align-items-center"><img src="/img/icons/pc-envelope.svg" onload="SVGInject(this)" alt="My Budgets Icon"><span class="d-block d-lg-none">New PC Envelope</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Export
-                        <i class="fas fa-file-export"></i>
-                    </a>
+                <li>
+                    <a href="#" class="d-flex align-items-center"><img src="/img/icons/pc-log.svg" onload="SVGInject(this)" alt="Contacts Icon"><span class="d-block d-lg-none">PC Envelopes</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings
-                        <i class="fas fa-cog"></i>
-                    </a>
+                <li>
+                    <a href="#" class="d-flex align-items-center"><img src="/img/icons/po-log.svg" onload="SVGInject(this)" alt="Contacts Icon"><span class="d-block d-lg-none">PO Log</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link avatar" href="#">
-                        <img src="img/avatar.png" alt="Avatar">
-                        Jens Jacob
-                    </a>
+
+                <li class="settings">
+                    <a href="#" class="d-flex align-items-center"><img src="/img/icons/settings.svg" onload="SVGInject(this)" alt="Contacts Icon"><span class="d-block d-lg-none">Settings</span></a>
                 </li>
             </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="container-fluid">
-        <div class="sub-navbar d-flex justify-content-between">
-            <nav class="breadcrumb-nav" aria-label="breadcrumb">
-                <ol class="breadcrumb d-flex align-items-center">
-                    <li class="breadcrumb-item"><a href="#">Top Sheet</a></li>
-                    <li class="breadcrumb-item"><a href="#">Production Costs</a></li>
-                    <li class="breadcrumb-item">
-                        <a class="btn btn-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development Costs</a>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
+        <!-- Page Content  -->
+        <div id="content" class="topsheet">
+            <nav class="navbar navbar-light bg-light">
+                <div class="btn-wrapper d-lg-none">
+                    <button type="button" id="sidebarCollapse">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="input-group input-search mr-auto order-3 order-lg-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" type="search" value="Search Projects..." id="search-input" />
+                </div>
+
+                <div class="spinner d-none d-lg-inline order-1 order-lg-2">
+                    <div class="spinner-border spinner-border-sm" role="status">
+                        <span class="sr-only">Changes Saved</span>
+                    </div>
+                    <strong class="spinner-status">Changes Saved</strong>
+                </div>
+
+                <div class="logo">
+                    <img src="/img/logo-green.svg" alt="Greenbudget Logo" class="d-block d-lg-none" onload="SVGInject(this)">
+                </div>
+
+                <ul class="navbar-nav order-2 order-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link avatar" href="#">
+                            <img src="/img/avatar.svg" class="user-avatar" onload="SVGInject(this)" alt="User Avatar">
+                            <span class="d-none d-lg-inline">Jens Jacob</span>
+                        </a>
                     </li>
-                </ol>
+                </ul>
             </nav>
 
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-light active">
-                    <input type="checkbox" autocomplete="off" checked>
-                    Estimated
-                </label>
-
-                <label class="btn btn-light">
-                    <input type="checkbox" autocomplete="off">
-                    Running
-                </label>
-
-                <label class="btn btn-light">
-                    <input type="checkbox" autocomplete="off">
-                    Actual
-                </label>
-
-                <label class="btn btn-light">
-                    <input type="checkbox" autocomplete="off">
-                    Details
-                </label>
-            </div>
-        </div>
-
-        <div class="main budget">
-            <div id='subTable' class="table-responsive">
-                <table class="table table-bordered">
-                    <thead class="bg-teal">
-                        <tr>
-                            <th scope="col">
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        A
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <h6 class="dropdown-header">Line Grouping</h6>
-                                        <div class="radio-form">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios1" value="option1" checked>
-                                                <label class="form-check-label" for="exampleRadios1">
-                                                    Letter Group
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                    Number Group
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <h6 class="dropdown-header">Line Number Format</h6>
-                                        <div class="radio-form">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lineNumberFormat" id="0000" value="option1" checked>
-                                                <label class="form-check-label" for="0000">
-                                                    0000
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lineNumberFormat" id="00" value="option2">
-                                                <label class="form-check-label" for="00">
-                                                    00
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lineNumberFormat" id="00-00" value="option2">
-                                                <label class="form-check-label" for="00-00">
-                                                    00-00
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="container">
+                <div class="sub-navbar d-flex justify-content-between">
+                    <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex align-items-center">
+                            <li class="breadcrumb-item"><a href="#">Top Sheet</a></li>
+                            <li class="breadcrumb-item"><a href="#">Production Costs</a></li>
+                            <li class="breadcrumb-item">
+                                <a class="btn btn-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development Costs</a>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
                                 </div>
-                            </th>
-                            <th scope="col">Pre-Production / Wrap Labor</th>
-                            </th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Unit</th>
-                            <th scope="col">Rate</th>
-                            <th scope="col">Fringes</th>
-                            <th scope="col">Estimated</th>
-                            <th scope="col" class="bg-dark">Actual</th>
-                            <th scope="col">Days</th>
-                            <th scope="col">Rate</th>
-                            <th scope="col">O/T</th>
-                            <th scope="col">FR%</th>
-                        </tr>
-                    </thead>
+                            </li>
+                        </ol>
+                    </nav>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">
-                                <input class="mx-auto" type="checkbox" id="row1">
-                                <span>01</span>
-                            </th>
-                            <td class="category-description" data-toggle="modal" data-target="#editCategory">Supervising Producer</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>$2,500</td>
-                            <td class="bg-dark">$2,500</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <input class="mx-auto" type="checkbox" id="row1">
-                                <span>02</span>
-                            </th>
-                            <td class="category-description" data-toggle="modal" data-target="#editCategory">Line Producer</td>
-                            <td><span class="badge badge-pill badge-purple">Jens Jacob</span></td>
-                            <td>5</td>
-                            <td><span class="badge badge-pill badge-red">Days</span></td>
-                            <td>$500</td>
-                            <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
-                            <td>$3,250</td>
-                            <td class="bg-dark">$3,250</td>
-                            <td>5</td>
-                            <td>$500</td>
-                            <td>2</td>
-                            <td>30%</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <input class="mx-auto" type="checkbox" id="row1">
-                                <span>03</span>
-                            </th>
-                            <td class="category-description" data-toggle="modal" data-target="#editCategory">Director of Photography</td>
-                            <td></td>
-                            <td>10</td>
-                            <td><span class="badge badge-pill badge-green">Weeks</span></td>
-                            <td>$1000</td>
-                            <td></td>
-                            <td>$13,000</td>
-                            <td class="bg-dark">$13,000</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <input class="mx-auto" type="checkbox" id="row1">
-                                <span>04</span>
-                            </th>
-                            <td class="category-description" data-toggle="modal" data-target="#editCategory">Second Camera Operator</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="bg-dark"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <input class="mx-auto" type="checkbox" id="row1">
-                                <span>05</span>
-                            </th>
-                            <td class="category-description" data-toggle="modal" data-target="#editCategory">1st AC</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="bg-dark"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light active">
+                            <input type="checkbox" autocomplete="off" checked>
+                            Estimated
+                        </label>
 
-                        <tr class="add-new-row">
-                            <th scope="row"><i class="fas fa-plus-circle"></i></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="bg-dark"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        <label class="btn btn-light">
+                            <input type="checkbox" autocomplete="off">
+                            Running
+                        </label>
 
-                        <thead class="bg-gray">
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
+                        <label class="btn btn-light">
+                            <input type="checkbox" autocomplete="off">
+                            Actual
+                        </label>
 
-                        <tr class="borderless">
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Sub Total</td>
-                            <td>$15,000</td>
-                            <td class="bg-dark">$15,000</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <label class="btn btn-light">
+                            <input type="checkbox" autocomplete="off">
+                            Details
+                        </label>
+                    </div>
+                </div>
+
+                <div class="main budget">
+                    <div id='subTable' class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="bg-teal">
+                                <tr>
+                                    <th scope="col">
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                A
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <h6 class="dropdown-header">Line Grouping</h6>
+                                                <div class="radio-form">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            Letter Group
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="lineGrouping" id="exampleRadios2" value="option2">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            Number Group
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <h6 class="dropdown-header">Line Number Format</h6>
+                                                <div class="radio-form">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="lineNumberFormat" id="0000" value="option1" checked>
+                                                        <label class="form-check-label" for="0000">
+                                                            0000
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="lineNumberFormat" id="00" value="option2">
+                                                        <label class="form-check-label" for="00">
+                                                            00
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="lineNumberFormat" id="00-00" value="option2">
+                                                        <label class="form-check-label" for="00-00">
+                                                            00-00
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col">Pre-Production / Wrap Labor</th>
+                                    </th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Unit</th>
+                                    <th scope="col">Rate</th>
+                                    <th scope="col">Fringes</th>
+                                    <th scope="col">Estimated</th>
+                                    <th scope="col" class="bg-dark">Actual</th>
+                                    <th scope="col">Days</th>
+                                    <th scope="col">Rate</th>
+                                    <th scope="col">O/T</th>
+                                    <th scope="col">FR%</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="mx-auto" type="checkbox" id="row1">
+                                        <span>01</span>
+                                    </th>
+                                    <td class="category-description" data-toggle="modal" data-target="#editCategory">Supervising Producer</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>$2,500</td>
+                                    <td class="bg-dark">$2,500</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="mx-auto" type="checkbox" id="row1">
+                                        <span>02</span>
+                                    </th>
+                                    <td class="category-description" data-toggle="modal" data-target="#editCategory">Line Producer</td>
+                                    <td><span class="badge badge-pill badge-purple">Jens Jacob</span></td>
+                                    <td>5</td>
+                                    <td><span class="badge badge-pill badge-red">Days</span></td>
+                                    <td>$500</td>
+                                    <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
+                                    <td>$3,250</td>
+                                    <td class="bg-dark">$3,250</td>
+                                    <td>5</td>
+                                    <td>$500</td>
+                                    <td>2</td>
+                                    <td>30%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="mx-auto" type="checkbox" id="row1">
+                                        <span>03</span>
+                                    </th>
+                                    <td class="category-description" data-toggle="modal" data-target="#editCategory">Director of Photography</td>
+                                    <td></td>
+                                    <td>10</td>
+                                    <td><span class="badge badge-pill badge-green">Weeks</span></td>
+                                    <td>$1000</td>
+                                    <td></td>
+                                    <td>$13,000</td>
+                                    <td class="bg-dark">$13,000</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="mx-auto" type="checkbox" id="row1">
+                                        <span>04</span>
+                                    </th>
+                                    <td class="category-description" data-toggle="modal" data-target="#editCategory">Second Camera Operator</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="bg-dark"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="mx-auto" type="checkbox" id="row1">
+                                        <span>05</span>
+                                    </th>
+                                    <td class="category-description" data-toggle="modal" data-target="#editCategory">1st AC</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="bg-dark"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr class="add-new-row">
+                                    <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="bg-dark"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <thead class="bg-gray">
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+
+                                <tr class="borderless">
+                                    <th></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Sub Total</td>
+                                    <td>$15,000</td>
+                                    <td class="bg-dark">$15,000</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- Modals -->
@@ -443,6 +485,8 @@
             </div>
         </div>
     </div>
+
+    <div class="overlay"></div>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>

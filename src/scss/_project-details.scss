@@ -1,0 +1,70 @@
+.new-project {
+
+    form {
+        background-color: $white;
+        padding: 20px;
+
+        @include media-breakpoint-up(sm) {
+            padding: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 50px;
+        }
+
+        .image-upload,
+        .image-upload-alt {
+
+            label {
+                cursor: pointer;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+
+        .image-upload-alt {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-up(xl) {
+                text-align: center;
+                border-left: 1px solid $gray-200;
+            }
+
+            label {
+                width: 60%;
+
+                @include media-breakpoint-up(md) {
+                    width: 50%;
+                    // margin: 0;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    // width: 10%;
+                    // margin: auto;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    width: 50%;
+                    margin: auto;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    width: 40%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

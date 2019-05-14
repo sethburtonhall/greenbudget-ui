@@ -1,240 +1,209 @@
 {% extends "../templates/layout.twig" %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><i class="fas fa-home"></i> green<span>budget</span> </a>
+<div class="wrapper">
 
-    <!-- <div class="spinner-border spinner-border-sm" role="status">
-        <span class="sr-only">Changes Saved</span>
-    </div>
-    <strong class="spinner-status">Changes Saved</strong> -->
+    {% include "../templates/partials/sidebar-alt.twig" %}
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Page Content  -->
+    <div id="content" class="topsheet">
+        {% include "../templates/partials/navbar.twig" %}
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Fringes
-                <i class="fas fa-percent"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Actual
-                <i class="fas fa-dollar-sign"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Export
-                <i class="fas fa-file-export"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Settings
-                <i class="fas fa-cog"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link avatar" href="#">
-                    <img src="img/avatar.png" alt="Avatar">
-                    Jens Jacob
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="sub-navbar d-flex justify-content-end">
-        <div class="button-group">
-            <button type="button" class="btn btn-dark">Import</button>
-            <button type="button" class="btn btn-dark">Export</button>
-        </div>
-    </div>
-
-    <div class="main table-basic">
-        <h1 class="purchase-order-title">Petty Cash Envelope Expenses</h1>
-
-        <form class="mt-4 mb-4">
-            <div class="form-row mb-md-3">
-                <label for="name" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Name:</label>
-                <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
-                    <input type="text" id="name" class="form-control">
-                </div>
-
-                <label for="date" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Date:</label>
-                <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
-                    <input type="text" id="date" class="form-control">
+        <div class="container">
+            <div class="sub-navbar d-flex justify-content-end">
+                <div class="button-group">
+                    <button type="button" class="btn btn-dark">Import</button>
+                    <button type="button" class="btn btn-dark">Export</button>
                 </div>
             </div>
 
-            <div class="form-row mb-md-3">
-                <label for="position" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Position:</label>
-                <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
-                    <input type="text" id="position" class="form-control">
-                </div>
+            <div class="main table-basic">
+                <h1 class="purchase-order-title">Petty Cash Envelope Expenses</h1>
 
-                <label for="phone" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Phone:</label>
-                <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
-                    <input type="text" id="phone" class="form-control">
+                <form class="mt-4 mb-4">
+                    <div class="form-row mb-md-3">
+                        <label for="name" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Name:</label>
+                        <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
+                            <input type="text" id="name" class="form-control">
+                        </div>
+
+                        <label for="date" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Date:</label>
+                        <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
+                            <input type="text" id="date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-md-3">
+                        <label for="position" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Position:</label>
+                        <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
+                            <input type="text" id="position" class="form-control">
+                        </div>
+
+                        <label for="phone" class="col-md-2  col-lg-1 col-form-label col-form-label-sm">Phone:</label>
+                        <div class="col-md-3  col-lg-4 col-xl-2 mr-md-4">
+                            <input type="text" id="phone" class="form-control">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Line <i class="fas fa-caret-down"></i></th>
+                                <th scope="col">Line Description</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Payee</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Notes / Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">1001</th>
+                                <td>Working Meal</td>
+                                <td>$100</td>
+                                <td>McDonalds</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3490</th>
+                                <td>Crafty</td>
+                                <td>$1000</td>
+                                <td>Ralphs</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2300</th>
+                                <td>Art Prop</td>
+                                <td>$300</td>
+                                <td>Wal Mart</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1930</th>
+                                <td>Production Supplies</td>
+                                <td>$290.30</td>
+                                <td>Staples</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2900</th>
+                                <td>Gas</td>
+                                <td>$23</td>
+                                <td>Chevron</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1890</th>
+                                <td>Wardrobe</td>
+                                <td>$193.24</td>
+                                <td>H&M</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1654</th>
+                                <td>Drives</td>
+                                <td>$153.44</td>
+                                <td>Best Buy</td>
+                                <td>9/18/18</td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="add-new-row">
+                                <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Line <i class="fas fa-caret-down"></i></th>
+                                <th scope="col">Petty Cash Summary</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">1001</th>
+                                <td>Working Meal</td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3490</th>
+                                <td>Crafty</td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2300</th>
+                                <td>Art Prop</td>
+                                <td>$300</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1930</th>
+                                <td>Production Supplies</td>
+                                <td>$290.30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2900</th>
+                                <td>Gas</td>
+                                <td>$23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1890</th>
+                                <td>Wardrobe</td>
+                                <td>$193.24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1654</th>
+                                <td>Drives</td>
+                                <td>$153.44</td>
+                            </tr>
+
+                            <tr class="add-new-row">
+                                <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                            </tr>
+                        </tbody>
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th></th>
+                                <th scope="col">Envelope Total</th>
+                                <th>$2,500</th>
+                            </tr>
+                        </thead>
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th></th>
+                                <th scope="col">PC Received</th>
+                                <th>$2,500</th>
+                            </tr>
+                        </thead>
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th></th>
+                                <th scope="col">Remaining</th>
+                                <th>$2,500</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
-        </form>
-
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Line <i class="fas fa-caret-down"></i></th>
-                        <th scope="col">Line Description</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Payee</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Notes / Description</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <th scope="row">1001</th>
-                        <td>Working Meal</td>
-                        <td>$100</td>
-                        <td>McDonalds</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3490</th>
-                        <td>Crafty</td>
-                        <td>$1000</td>
-                        <td>Ralphs</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2300</th>
-                        <td>Art Prop</td>
-                        <td>$300</td>
-                        <td>Wal Mart</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1930</th>
-                        <td>Production Supplies</td>
-                        <td>$290.30</td>
-                        <td>Staples</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2900</th>
-                        <td>Gas</td>
-                        <td>$23</td>
-                        <td>Chevron</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1890</th>
-                        <td>Wardrobe</td>
-                        <td>$193.24</td>
-                        <td>H&M</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1654</th>
-                        <td>Drives</td>
-                        <td>$153.44</td>
-                        <td>Best Buy</td>
-                        <td>9/18/18</td>
-                        <td></td>
-                    </tr>
-
-                    <tr class="add-new-row">
-                        <th scope="row"><i class="fas fa-plus-circle"></i></th>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Line <i class="fas fa-caret-down"></i></th>
-                        <th scope="col">Petty Cash Summary</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <th scope="row">1001</th>
-                        <td>Working Meal</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3490</th>
-                        <td>Crafty</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2300</th>
-                        <td>Art Prop</td>
-                        <td>$300</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1930</th>
-                        <td>Production Supplies</td>
-                        <td>$290.30</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2900</th>
-                        <td>Gas</td>
-                        <td>$23</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1890</th>
-                        <td>Wardrobe</td>
-                        <td>$193.24</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1654</th>
-                        <td>Drives</td>
-                        <td>$153.44</td>
-                    </tr>
-
-                    <tr class="add-new-row">
-                        <th scope="row"><i class="fas fa-plus-circle"></i></th>
-                    </tr>
-                </tbody>
-
-                <thead class="thead-dark">
-                    <tr>
-                        <th></th>
-                        <th scope="col">Envelope Total</th>
-                        <th>$2,500</th>
-                    </tr>
-                </thead>
-
-                <thead class="thead-dark">
-                    <tr>
-                        <th></th>
-                        <th scope="col">PC Received</th>
-                        <th>$2,500</th>
-                    </tr>
-                </thead>
-
-                <thead class="thead-dark">
-                    <tr>
-                        <th></th>
-                        <th scope="col">Remaining</th>
-                        <th>$2,500</th>
-                    </tr>
-                </thead>
-            </table>
         </div>
     </div>
+
 </div>
+
+<div class="overlay"></div>
 {% endblock %}

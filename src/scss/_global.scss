@@ -33,6 +33,10 @@ a {
     }
 }
 
+h1 {
+    line-height: $line-height-sm;
+}
+
 [data-toggle='modal'] {
     cursor: pointer;
 }
@@ -72,6 +76,10 @@ a {
 
 .bg-light {
     background-color: $white !important;
+}
+
+.btn-border {
+    border: 1px solid $dark;
 }
 
 .btn-group-toggle,
