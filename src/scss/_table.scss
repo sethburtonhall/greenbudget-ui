@@ -106,133 +106,137 @@
         }
     }
 
-    tr {
+    tbody {
 
-        &:hover {
+        tr {
 
-            th[scope=row] {
+            &:hover {
+                background: lighten($primary, 45);
 
-                &::before {
+                th[scope=row] {
+
+                    &::before {
+                        color: $gray-300;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    input[type=checkbox] {
+                        display: block;
+                    }
+                }
+            }
+
+            // td.multi-badge-inline {
+            //     max-width: 17px;
+            //     display: block;
+            //     width: 100%;
+            //     height: 100%;
+            //     max-width: 250px;
+            //     overflow: scroll;
+            //     overflow-y: hidden;
+            //     overflow: auto;
+            //     text-overflow: ellipsis;
+            //     white-space: nowrap;
+            // }
+
+            &.bg-highlight {
+                background-color: lighten($primary, 45);
+            }
+
+            &.borderless {
+
+                th,
+                td {
+                    border: 0;
+                }
+            }
+
+            // td.multi-badge-inline {
+            //     width: 225px;
+            //     text-overflow: initial;
+            // }
+        }
+
+        td {
+            vertical-align: middle;
+
+            &.category-description {
+
+                &:after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 16px;
+                    content: "\f337";
+                    color: transparent;
+                    float: right;
+                    transform: rotate(135deg);
+                }
+
+                &:hover:after {
+                    cursor: pointer;
                     color: $gray-300;
                 }
 
-                span {
-                    display: none;
-                }
-
-                input[type=checkbox] {
-                    display: block;
+                a {
+                    color: $body-color;
                 }
             }
         }
 
-        // td.multi-badge-inline {
-        //     max-width: 17px;
-        //     display: block;
-        //     width: 100%;
-        //     height: 100%;
-        //     max-width: 250px;
-        //     overflow: scroll;
-        //     overflow-y: hidden;
-        //     overflow: auto;
-        //     text-overflow: ellipsis;
-        //     white-space: nowrap;
-        // }
-
-        &.highlight {
-            background-color: lighten($blue, 45);
+        th,
+        td:not(.category-description) {
+            text-align: right;
         }
 
-        &.borderless {
-
-            th,
-            td {
-                border: 0;
-            }
+        td.has-badge,
+        td.multi-badge-inline {
+            text-align: left;
         }
 
-        // td.multi-badge-inline {
-        //     width: 225px;
-        //     text-overflow: initial;
-        // }
-    }
+        span, div, th, td {
+          // overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
 
-    td {
-        vertical-align: middle;
-
-        &.category-description {
-
-            &:after {
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                font-size: 16px;
-                content: "\f337";
-                color: transparent;
-                float: right;
-                transform: rotate(135deg);
-            }
-
-            &:hover:after {
-                cursor: pointer;
-                color: $gray-300;
-            }
-
-            a {
-                color: $body-color;
-            }
+          @include media-breakpoint-up(xl) {
+              max-width: 250px;
+          }
         }
-    }
 
-    th,
-    td:not(.category-description) {
-        text-align: right;
-    }
+        th[scope=col] {
+            text-align: left;
+        }
 
-    td.has-badge,
-    td.multi-badge-inline {
-        text-align: left;
-    }
+        .add-new-row th[scope=row] i {
+            font-size: 20px;
+        }
 
-    span, div, th, td {
-      // overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-      @include media-breakpoint-up(xl) {
-          max-width: 250px;
-      }
-    }
-
-    th[scope=col] {
-        text-align: left;
-    }
-
-    .add-new-row th[scope=row] i {
-        font-size: 20px;
-    }
-
-    [class*="bg-"] {
-        color: $white;
-        border: $dark;
-        border: none;
-
-        th {
+        [class*="bg-"] {
+            color: $white;
+            border: $dark;
             border: none;
+
+            th {
+                border: none;
+            }
         }
-    }
 
-    .thead-dark th.negative-variance {
-        color: $red;
-    }
+        .thead-dark th.negative-variance {
+            color: $red;
+        }
 
-    .add-new-row {
-        cursor: pointer;
+        .add-new-row {
+            cursor: pointer;
 
-        th[scope=row] {
-            border-bottom: none;
+            th[scope=row] {
+                border-bottom: none;
 
-            &:before {
-                content: '';
+                &:before {
+                    content: '';
+                }
             }
         }
     }
