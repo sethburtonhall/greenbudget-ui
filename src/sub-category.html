@@ -193,7 +193,16 @@
                                     <th scope="col">Amount</th>
                                     <th scope="col">Unit</th>
                                     <th scope="col">Rate</th>
-                                    <th scope="col">Fringes</th>
+                                    <th scope="col" class="text-left">
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Fringes
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editFringes"><i class="far fa-edit"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </th>
                                     <th scope="col">Estimated</th>
                                     <th scope="col" class="bg-dark">Actual</th>
                                     <th scope="col">Days</th>
@@ -228,9 +237,9 @@
                                         <span>02</span>
                                     </th>
                                     <td class="category-description" data-toggle="modal" data-target="#editCategory">Line Producer</td>
-                                    <td><span class="badge badge-pill badge-purple">Jens Jacob</span></td>
+                                    <td class="has-badge"><span class="badge badge-pill badge-purple">Jens Jacob</span></td>
                                     <td>5</td>
-                                    <td><span class="badge badge-pill badge-red">Days</span></td>
+                                    <td class="has-badge"><span class="badge badge-pill badge-red">Days</span></td>
                                     <td>$500</td>
                                     <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
                                     <td>$3,250</td>
@@ -248,7 +257,7 @@
                                     <td class="category-description" data-toggle="modal" data-target="#editCategory">Director of Photography</td>
                                     <td></td>
                                     <td>10</td>
-                                    <td><span class="badge badge-pill badge-green">Weeks</span></td>
+                                    <td class="has-badge"><span class="badge badge-pill badge-green">Weeks</span></td>
                                     <td>$1000</td>
                                     <td></td>
                                     <td>$13,000</td>
@@ -310,42 +319,25 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
-
-                                <thead class="bg-gray">
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-
-                                <tr class="borderless">
-                                    <th></th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Sub Total</td>
-                                    <td>$15,000</td>
-                                    <td class="bg-dark">$15,000</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
                             </tbody>
                         </table>
+                    </div>
+
+                    <div class="totals d-flex flex-column">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <p>Sub Total:</p>
+                            <p class="total">$2,500</p>
+                        </div>
+
+                        <div class="d-flex justify-content-end align-items-center">
+                            <p>Fringes:</p>
+                            <p class="total">$2,500</p>
+                        </div>
+
+                        <div class="d-flex justify-content-end align-items-center">
+                            <p><strong>Estimated Total: </strong></p>
+                            <p class="total"><strong>$2,500</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -354,6 +346,60 @@
     </div>
 
     <!-- Modals -->
+    <div class="modal fade" id="editCategoryTitle" tabindex="-1" role="dialog" aria-labelledby="editCategory" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCategoryTitle">Edit Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="category-name" class="col-form-label">Category Name</label>
+                            <input type="text" class="form-control form-control-lg" id="category-name" placeholder="Category Name">
+                        </div>
+
+                        <div class="form-group color-picker">
+                            <label class="col-form-label">Category Color</label>
+                            <div class="form-check">
+                                <input type="radio" name="color" id="red" value="red" />
+                                <label for="red"><span class="red"></span></label>
+
+                                <input type="radio" name="color" id="orange" />
+                                <label for="orange"><span class="orange"></span></label>
+
+                                <input type="radio" name="color" id="yellow" />
+                                <label for="yellow"><span class="yellow"></span></label>
+
+                                <input type="radio" name="color" id="green" />
+                                <label for="green"><span class="green"></span></label>
+
+                                <input type="radio" name="color" id="teal" />
+                                <label for="teal"><span class="teal"></span></label>
+
+                                <input type="radio" name="color" id="blue" />
+                                <label for="blue"><span class="blue"></span></label>
+
+                                <input type="radio" name="color" id="indigo" />
+                                <label for="indigo"><span class="indigo"></span></label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-border" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="editCategory" tabindex="-1" role="dialog" aria-labelledby="editCategory" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
@@ -481,6 +527,83 @@
                         </div>
 
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editFringes" tabindex="-1" role="dialog" aria-labelledby="editFringes" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editCategoryTitle">Fringes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <table id='mainTable' class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col" class="text-left">Description</th>
+                                <th scope="col" class="text-center">Rate</th>
+                                <th scope="col" class="text-center">Units</th>
+                                <th scope="col" class="text-center">Cutoff</th>
+                                <th scope="col" class="text-center">Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="has-badge"><span class="badge badge-pill badge-yellow">WGA</span></td>
+                                <td class="category-description">Writers Guild of America Pension & Health</td>
+                                <td>19.5</td>
+                                <td class="has-badge"><span class="badge badge-pill badge-blue">Percent</span></td>
+                                <td>250,000</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td class="has-badge"><span class="badge badge-pill badge-pink">FICA</span></td>
+                                <td class="category-description">Federal Insurance Tax</td>
+                                <td>6.20</td>
+                                <td class="has-badge"><span class="badge badge-pill badge-blue">Percent</span></td>
+                                <td>128,400</td>
+                                <td>$1,300</td>
+                            </tr>
+                            <tr>
+                                <td class="has-badge"><span class="badge badge-pill badge-orange">WC</span></td>
+                                <td class="category-description">Workers Comp</td>
+                                <td>273.35</td>
+                                <td class="has-badge"><span class="badge badge-pill badge-green">Week</span></td>
+                                <td>0</td>
+                                <td>650</td>
+                            </tr>
+                            <tr>
+                                <td class="has-badge"><span class="badge badge-pill badge-green">Payroll</span></td>
+                                <td class="category-description">California Payroll</td>
+                                <td>1.00</td>
+                                <td class="has-badge"><span class="badge badge-pill badge-blue">Percent</span></td>
+                                <td>0</td>
+                                <td>50</td>
+                            </tr>
+
+                            <tr class="add-new-row">
+                                <th scope="row"><i class="fas fa-plus-circle"></i></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-border" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark">Save</button>
                 </div>
             </div>
         </div>

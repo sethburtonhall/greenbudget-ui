@@ -37,24 +37,6 @@ h1 {
     line-height: $line-height-sm;
 }
 
-[data-toggle='modal'] {
-    cursor: pointer;
-}
-
-.btn-plain {
-    background: transparent;
-    color: $white;
-
-    &:hover,
-    &:focus,
-    &:active:focus,
-    &.btn:not(:disabled):not(.disabled):active:focus {
-        box-shadow: none;
-        color: $white;
-    }
-
-}
-
 .dropdown {
 
     ul {
@@ -72,6 +54,24 @@ h1 {
     font-size: 1rem;
     font-weight: normal;
     margin: 3px 0;
+}
+
+.btn {
+    min-width: 100px;
+}
+
+.btn-plain {
+    background: transparent;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.btn:not(:disabled):not(.disabled):active:focus {
+        box-shadow: none;
+        color: $white;
+    }
+
 }
 
 .bg-light {
