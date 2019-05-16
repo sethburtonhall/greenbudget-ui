@@ -1,6 +1,25 @@
 .table-basic {
 
+    tbody {
+
+        th,
+        td:not(.category-description) {
+            text-align: left;
+            // width:none;
+            white-space:nowrap;
+        }
+
+        td {
+            width: inherit;
+            white-space:nowrap;
+        }
+
+    }
+
     form {
+        background: $white;
+        border: 1px solid $gray-300;
+        padding: $spacer*2;
 
         .form-row {
 

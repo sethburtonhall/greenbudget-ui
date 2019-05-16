@@ -67,7 +67,7 @@
                     </button>
                 </div>
 
-                <div class="input-group input-search mr-auto order-3 order-lg-1">
+                <div class="input-group input-search order-3 order-lg-1">
                     <div class="input-group-prepend">
                         <span class="input-group-text">
                             <i class="fa fa-search"></i>
@@ -76,18 +76,22 @@
                     <input class="form-control" type="search" value="Search Projects..." id="search-input" />
                 </div>
 
-                <div class="spinner d-none d-lg-inline order-1 order-lg-2">
+                <div class="spinner d-none d-lg-inline mr-auto order-1 order-lg-2">
                     <div class="spinner-border spinner-border-sm" role="status">
                         <span class="sr-only">Changes Saved</span>
                     </div>
                     <strong class="spinner-status">Changes Saved</strong>
                 </div>
 
+                <div class="export-icon order-4 order-lg-3">
+                    <img src="/img/icons/export.svg" onload="SVGInject(this)" alt="Export Icon" />
+                </div>
+
                 <div class="logo">
                     <img src="/img/logo-green.svg" alt="Greenbudget Logo" class="d-block d-lg-none" onload="SVGInject(this)">
                 </div>
 
-                <ul class="navbar-nav order-2 order-lg-3">
+                <ul class="navbar-nav order-2 order-lg-4">
                     <li class="nav-item">
                         <a class="nav-link avatar" href="#">
                             <img src="/img/avatar.svg" class="user-avatar" onload="SVGInject(this)" alt="User Avatar">
@@ -139,7 +143,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Line <i class="fas fa-caret-down"></i></th>
-                                    <th scope="col">Line Description</th>
+                                    <th scope="col" class="category-description">Line Description</th>
                                     <th scope="col">Amount</th>
                                     <th scope="col">Payee</th>
                                     <th scope="col">Date</th>
@@ -150,56 +154,56 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1001</th>
-                                    <td>Working Meal</td>
-                                    <td>$100</td>
+                                    <td class="category-description">Working Meal</td>
+                                    <td class="text-right">$100</td>
                                     <td>McDonalds</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3490</th>
-                                    <td>Crafty</td>
-                                    <td>$1000</td>
+                                    <td class="category-description">Crafty</td>
+                                    <td class="text-right">$1000</td>
                                     <td>Ralphs</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2300</th>
-                                    <td>Art Prop</td>
-                                    <td>$300</td>
+                                    <td class="category-description">Art Prop</td>
+                                    <td class="text-right">$300</td>
                                     <td>Wal Mart</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1930</th>
-                                    <td>Production Supplies</td>
-                                    <td>$290.30</td>
+                                    <td class="category-description">Production Supplies</td>
+                                    <td class="text-right">$290.30</td>
                                     <td>Staples</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2900</th>
-                                    <td>Gas</td>
-                                    <td>$23</td>
+                                    <td class="category-description">Gas</td>
+                                    <td class="text-right">$23</td>
                                     <td>Chevron</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1890</th>
-                                    <td>Wardrobe</td>
-                                    <td>$193.24</td>
+                                    <td class="category-description">Wardrobe</td>
+                                    <td class="text-right">$193.24</td>
                                     <td>H&M</td>
                                     <td>9/18/18</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1654</th>
-                                    <td>Drives</td>
-                                    <td>$153.44</td>
+                                    <td class="category-description">Drives</td>
+                                    <td class="text-right">$153.44</td>
                                     <td>Best Buy</td>
                                     <td>9/18/18</td>
                                     <td></td>
@@ -210,7 +214,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
 
+                    <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead class="thead-dark">
                                 <tr>
@@ -223,38 +229,38 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1001</th>
-                                    <td>Working Meal</td>
-                                    <td>$100</td>
+                                    <td class="category-description">Working Meal</td>
+                                    <td class="text-right">$100</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3490</th>
-                                    <td>Crafty</td>
-                                    <td>$100</td>
+                                    <td class="category-description">Crafty</td>
+                                    <td class="text-right">$100</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2300</th>
-                                    <td>Art Prop</td>
-                                    <td>$300</td>
+                                    <td class="category-description">Art Prop</td>
+                                    <td class="text-right">$300</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1930</th>
-                                    <td>Production Supplies</td>
-                                    <td>$290.30</td>
+                                    <td class="category-description">Production Supplies</td>
+                                    <td class="text-right">$290.30</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2900</th>
-                                    <td>Gas</td>
-                                    <td>$23</td>
+                                    <td class="category-description">Gas</td>
+                                    <td class="text-right">$23</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1890</th>
-                                    <td>Wardrobe</td>
-                                    <td>$193.24</td>
+                                    <td class="category-description">Wardrobe</td>
+                                    <td class="text-right">$193.24</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">1654</th>
-                                    <td>Drives</td>
-                                    <td>$153.44</td>
+                                    <td class="category-description">Drives</td>
+                                    <td class="text-right">$153.44</td>
                                 </tr>
 
                                 <tr class="add-new-row">
@@ -266,7 +272,7 @@
                                 <tr>
                                     <th></th>
                                     <th scope="col">Envelope Total</th>
-                                    <th>$2,500</th>
+                                    <th class="text-right">$2,500</th>
                                 </tr>
                             </thead>
 
@@ -274,7 +280,7 @@
                                 <tr>
                                     <th></th>
                                     <th scope="col">PC Received</th>
-                                    <th>$2,500</th>
+                                    <th class="text-right">$2,500</th>
                                 </tr>
                             </thead>
 
@@ -282,7 +288,7 @@
                                 <tr>
                                     <th></th>
                                     <th scope="col">Remaining</th>
-                                    <th>$2,500</th>
+                                    <th class="text-right">$2,500</th>
                                 </tr>
                             </thead>
                         </table>
