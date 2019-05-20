@@ -63,7 +63,7 @@
             <nav class="navbar navbar-light bg-light">
                 <div class="btn-wrapper d-lg-none">
                     <button type="button" id="sidebarCollapse">
-                        <i class="fas fa-bars"></i>
+                        <img src="/img/icons/menu.svg" onload="SVGInject(this)" alt="Export Icon" />
                     </button>
                 </div>
 
@@ -73,7 +73,7 @@
                             <i class="fa fa-search"></i>
                         </span>
                     </div>
-                    <input class="form-control" type="search" value="Search Projects..." id="search-input" />
+                    <input class="form-control" type="search" value="Search Line Items" id="search-input" />
                 </div>
 
                 <div class="spinner d-none d-lg-inline mr-auto order-1 order-lg-2">
@@ -85,10 +85,6 @@
 
                 <div class="export-icon order-4 order-lg-3">
                     <img src="/img/icons/export.svg" onload="SVGInject(this)" alt="Export Icon" />
-                </div>
-
-                <div class="logo">
-                    <img src="/img/logo-green.svg" alt="Greenbudget Logo" class="d-block d-lg-none" onload="SVGInject(this)">
                 </div>
 
                 <ul class="navbar-nav order-2 order-lg-4">
@@ -118,22 +114,22 @@
                     </nav>
 
                     <div class="btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-light active">
+                        <label class="btn btn-border active">
                             <input type="checkbox" autocomplete="off" checked>
                             Estimated
                         </label>
 
-                        <label class="btn btn-light">
+                        <label class="btn btn-border">
                             <input type="checkbox" autocomplete="off">
                             Running
                         </label>
 
-                        <label class="btn btn-light">
+                        <label class="btn btn-border">
                             <input type="checkbox" autocomplete="off">
                             Actual
                         </label>
 
-                        <label class="btn btn-light">
+                        <label class="btn btn-border">
                             <input type="checkbox" autocomplete="off">
                             Details
                         </label>
@@ -364,7 +360,7 @@
                     <form>
                         <div class="form-group">
                             <label for="category-name" class="col-form-label">Category Name</label>
-                            <input type="text" class="form-control form-control-lg" id="category-name" placeholder="Category Name">
+                            <input type="text" class="form-control form-control-lg w-50" id="category-name" placeholder="Category Name">
                         </div>
 
                         <div class="form-group color-picker">
@@ -414,7 +410,7 @@
                     <form>
                         <div class="form-group">
                             <label for="category-name" class="col-form-label">Category Name</label>
-                            <input type="text" class="form-control form-control-lg" id="category-name" placeholder="Supervising Producer">
+                            <input type="text" class="form-control form-control-lg w-50" id="category-name" placeholder="Supervising Producer">
                         </div>
 
                         <div id='subTable' class="table-responsive">

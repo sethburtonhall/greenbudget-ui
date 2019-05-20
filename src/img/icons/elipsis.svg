@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="31" viewBox="0 0 7 31">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="7" height="31" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="move_rows_icon" data-name="move rows icon" clip-path="url(#clip-path)">
+    <g transform="translate(-154 -300)">
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(154 301)" fill="#f7f7f7"/>
+    </g>
+    <g transform="translate(-154 -289)">
+      <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(154 301)" fill="#f7f7f7"/>
+    </g>
+    <g transform="translate(-154 -278)">
+      <circle id="Ellipse_2-3" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(154 301)" fill="#f7f7f7"/>
+    </g>
+  </g>
+</svg>

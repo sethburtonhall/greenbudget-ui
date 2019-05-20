@@ -46,6 +46,11 @@
                         padding: 10px;
                     }
 
+                    .card-image {
+                        width: 100px;
+                        height: 100px;
+                    }
+
                     .card-body {
                         padding: 0;
                         margin-left: 10px;
@@ -75,7 +80,7 @@
 
                     .fa-info-circle {
                         color: $gray-300;
-                        padding: 20px;
+                            padding: 20px 20px 20px 0px;
                         font-size: 20px;
 
                         @include media-breakpoint-up(xl) {

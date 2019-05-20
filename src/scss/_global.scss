@@ -16,14 +16,17 @@
     width: 100%;
     // max-width: 1545px;
     margin: auto;
+}
 
-    .header {
-        font-size: 30px;
-        font-weight: 900;
+.header {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: $dark;
 
-        @include media-breakpoint-up(lg) {
-            font-size: 55px;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 50px;
     }
 }
 
@@ -115,8 +118,9 @@ h1 {
         }
     }
 
-    .btn-light:not(:disabled):not(.disabled):active,
-    .btn-light:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle {
+    .btn:not(:disabled):not(.disabled):active,
+    .btn:not(:disabled):not(.disabled).active,
+    .show > .btn.dropdown-toggle {
         background-color: $dark;
         color: $white;
     }

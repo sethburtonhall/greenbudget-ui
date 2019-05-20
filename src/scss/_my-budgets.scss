@@ -10,10 +10,10 @@
 
     .container {
         max-width: 1650px;
+        margin-top: 6rem;
     }
 
     .action-bar {
-        margin-bottom: $spacer;
 
         .btn-group {
 
@@ -81,17 +81,14 @@
 
     .card {
         border-radius: 14px;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
 
         @include media-breakpoint-up(xl) {
             width: auto;
         }
 
         .card-img-top {
-
-            @include media-breakpoint-up(xl) {
-                min-height: 224px;
-            }
+            height: 150px;
         }
 
         img {
@@ -125,17 +122,21 @@
             .btn-group .dropdown-toggle:after {
                 display: none;
             }
+
+            button {
+                padding-right: 0;
+
+                svg {
+                    float: right;
+                }
+            }
         }
 
         .card-body {
             background-color: $dark;
             color: $white;
             border-radius: 0 0 14px 14px;
-            padding: 10px 14px;
-
-            @include media-breakpoint-up(sm) {
-                padding: 15px;
-            }
+            padding: 13px 15px;
 
             h5 {
 

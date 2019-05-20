@@ -75,6 +75,10 @@
             }
         }
 
+        th {
+            border: 0;
+        }
+
         tr {
 
             th:first-child {
@@ -222,6 +226,26 @@
             th {
                 border: none;
             }
+
+        }
+
+        [class*="bg-highlight"] {
+            color: $dark;
+
+            th[scope=row] {
+
+                &::before {
+                    color: $gray-300;
+                }
+
+                span {
+                    display: none;
+                }
+
+                input[type=checkbox] {
+                    display: block;
+                }
+            }
         }
 
         .thead-dark th.negative-variance {
@@ -254,26 +278,4 @@
         border-radius: $border-radius-lg;
         border: 2px solid $gray-300;
     }
-}
-
-// fixed left column with scroll
-
-.sticky-col {
-    position: sticky;
-    position: -webkit-sticky;
-    background-color: white;
-}
-
-.first-col {
-    width: 100px;
-    min-width: 100px;
-    max-width: 100px;
-    left: 0px;
-}
-
-.second-col {
-    width: 150px;
-    min-width: 150px;
-    max-width: 150px;
-    left: 100px;
 }

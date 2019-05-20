@@ -1,15 +1,31 @@
 .new-project {
 
+    .container {
+
+        @include media-breakpoint-up(xl) {
+            padding-right: 63px;
+        }
+    }
+
     form {
         background-color: $white;
         padding: 20px;
+        border-radius: $border-radius;
 
         @include media-breakpoint-up(sm) {
             padding: 30px;
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 50px;
+            // padding: 50px;
+        }
+
+        .form-group.row {
+            margin-bottom: .5rem;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 1.5rem;
+            }
         }
 
         .image-upload,

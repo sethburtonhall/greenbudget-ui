@@ -13,6 +13,10 @@
         &:focus {
             outline: none;
         }
+
+        svg {
+            width: 30px;
+        }
     }
 
     .input-search {
@@ -23,7 +27,6 @@
         //     margin: 0 0 0 20px;
         // }
 
-
         @include media-breakpoint-up(lg) {
             width: 40%;
             margin: 0 0 0 20px;
@@ -32,6 +35,20 @@
         @include media-breakpoint-up(xl) {
             width: 25%;
             margin: 0 0 0 20px;
+        }
+
+        &.has-icon {
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: 40%;
+                margin: 0 0 0 20px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 25%;
+                margin: 0 0 0 20px;
+            }
         }
 
         .input-group-text,
@@ -68,7 +85,11 @@
     }
 
     .export-icon {
-        margin-right: 15px;
+        margin-right: 20px;
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 15px;
+        }
 
         svg {
             width: 20px;
