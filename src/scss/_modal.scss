@@ -2,9 +2,14 @@
 
     .modal-content {
             padding: 10px !important;
+            background: $body-bg;
 
         @include media-breakpoint-up(lg) {
             padding: 30px 50px !important;
+        }
+
+        .form-control:not(select) {
+            background-color: $white;
         }
     }
 

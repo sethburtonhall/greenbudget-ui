@@ -41,6 +41,34 @@
 
         <!-- Page Content  -->
         <div id="content" class="new-project">
+            <nav class="navbar navbar-basic navbar-light bg-light">
+                <div class="btn-wrapper d-lg-none">
+                    <button type="button" id="sidebarCollapse">
+                        <img src="/img/icons/menu.svg" onload="SVGInject(this)" alt="Export Icon" />
+                    </button>
+                </div>
+
+                <div class="spinner d-none d-lg-inline order-lg-1">
+                    <div class="spinner-border spinner-border-sm" role="status">
+                        <span class="sr-only">Changes Saved</span>
+                    </div>
+                    <strong class="spinner-status">Changes Saved</strong>
+                </div>
+
+                <div class="logo d-block d-lg-none">
+                    <img src="/img/logo-green.svg" alt="Greenbudget Logo" onload="SVGInject(this)">
+                </div>
+
+                <ul class="navbar-nav order-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link avatar" href="#">
+                            <img src="/img/avatar.svg" class="user-avatar" onload="SVGInject(this)" alt="User Avatar">
+                            <span class="d-none d-lg-inline">Jens Jacob</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="container">
                 <form>
                     <h1 class="header">Production Info</h1>

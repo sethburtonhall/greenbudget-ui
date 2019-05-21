@@ -113,7 +113,7 @@
                         </ol>
                     </nav>
 
-                    <div class="btn-group-toggle" data-toggle="buttons">
+                    <div class="btn-group-toggle d-none d-xl-block" data-toggle="buttons">
                         <label class="btn btn-border active">
                             <input type="checkbox" autocomplete="off" checked>
                             Estimated
@@ -133,6 +133,38 @@
                             <input type="checkbox" autocomplete="off">
                             Details
                         </label>
+                    </div>
+
+                    <div class="dropdown d-block d-xl-none">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Options
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="estimated">
+                                <label class="form-check-label" for="estimated">
+                                    Estimated
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="running">
+                                <label class="form-check-label" for="running">
+                                    Running
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="actual">
+                                <label class="form-check-label" for="actual">
+                                    Actual
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="details">
+                                <label class="form-check-label" for="details">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -205,10 +237,11 @@
                                     </th>
                                     <th scope="col">Estimated</th>
                                     <th scope="col" class="bg-dark">Actual</th>
-                                    <th scope="col">Days</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Unit</th>
                                     <th scope="col">Rate</th>
-                                    <th scope="col">O/T</th>
-                                    <th scope="col">FR%</th>
+                                    <th scope="col">Fringes</th>
+                                    <th scope="col">Running</th>
                                 </tr>
                             </thead>
 
@@ -226,6 +259,7 @@
                                     <td></td>
                                     <td>$2,500</td>
                                     <td class="bg-dark">$2,500</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -248,6 +282,7 @@
                                     <td>$500</td>
                                     <td>2</td>
                                     <td>30%</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -262,6 +297,7 @@
                                     <td></td>
                                     <td>$13,000</td>
                                     <td class="bg-dark">$13,000</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -284,6 +320,7 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
@@ -302,6 +339,7 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
                                 </tr>
 
                                 <tr class="add-new-row">
@@ -314,6 +352,7 @@
                                     <td></td>
                                     <td></td>
                                     <td class="bg-dark"></td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

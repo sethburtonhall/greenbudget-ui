@@ -1,13 +1,5 @@
 .home {
 
-    .navbar {
-        justify-content: space-between;
-
-        @include media-breakpoint-up(lg) {
-            justify-content: flex-end;
-        }
-    }
-
     .container {
         max-width: 1450px;
         margin-top: 6rem;

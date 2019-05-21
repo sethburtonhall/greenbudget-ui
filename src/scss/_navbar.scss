@@ -5,6 +5,14 @@
         padding: .5rem 2rem;
     }
 
+    &.navbar-basic {
+        justify-content: space-between;
+
+        @include media-breakpoint-up(lg) {
+            justify-content: flex-end;
+        }
+    }
+
     button {
         background-color: transparent;
         border: none;
@@ -141,11 +149,15 @@
 
 .sub-navbar {
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
     @include media-breakpoint-down(sm) {
         flex-direction: column;
-        text-align: center;
+        text-align: right;
+    }
+
+    @include media-breakpoint-up(md) {
+        align-items: center;
     }
 
     .breadcrumb-nav {
@@ -157,6 +169,7 @@
         .breadcrumb {
             background-color: transparent;
             padding-left: 0;
+            margin-bottom: 0;
 
             .breadcrumb-item::before {
                 display: inline-block;
@@ -170,5 +183,9 @@
     .btn-group-toggle,
     .btn-group {
         margin-top: 5px;
+    }
+
+    .form-check {
+        padding: 5px 35px;
     }
 }
