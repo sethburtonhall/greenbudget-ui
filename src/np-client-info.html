@@ -70,49 +70,85 @@
             </nav>
 
             <div class="container">
-                <form>
+                <form class="needs-validation" novalidate>
                     <h1 class="header">Client/Agency Info</h1>
                     <div class="form-row">
                         <div class="col-xl-7 pr-xl-10">
                             <div class="form-group row">
                                 <label for="client" class="col-sm-3 col-form-label">Client/Agency:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="client">
+                                    <input type="text" class="form-control" id="client" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter Client/Agency info.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="address" class="col-sm-3 col-form-label">Address:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="address">
+                                    <input type="text" class="form-control" id="address" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter an address.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="email" class="col-sm-3 col-form-label">Email:</label>
                                 <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="email">
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter an email address.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="phone" class="col-sm-3 col-form-label">Phone:</label>
                                 <div class="col-sm-9">
-                                    <input type="tel" class="form-control" id="phone">
+                                    <input type="tel" class="form-control" id="phone" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a phone number.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="producer" class="col-sm-3 col-form-label">Agency Producer:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="producer">
+                                    <input type="text" class="form-control" id="producer" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a name.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="director" class="col-sm-3 col-form-label">Creative Director:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="director">
+                                    <input type="text" class="form-control" id="director" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter a name.
+                                    </div>
                                 </div>
                             </div>
 
@@ -139,7 +175,7 @@
 
                         <div class="button-group">
                             <a class="btn btn-light btn-border" href="np-production-info.html" role="button">Back</a>
-                            <button type="button" class="btn btn-dark">Save</button>
+                            <button type="submit" class="btn btn-dark">Save</button>
                         </div>
                     </div>
                 </form>
@@ -154,6 +190,7 @@
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js"></script>
+    <script src="/js/custom-form-validation.js"></script>
     <!-- jQuery Custom Scroller CDN -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
 </body>
