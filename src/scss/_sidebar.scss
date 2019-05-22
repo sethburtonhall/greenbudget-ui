@@ -159,10 +159,29 @@
             align-items: center;
         }
 
-        li a {
+        li {
 
-            @include media-breakpoint-up(lg) {
-                padding: 10px 20px;
+            &.disabled {
+
+                &:hover {
+                    background: transparent;
+                }
+
+                a:hover {
+                    cursor: default;
+                }
+
+                svg text,
+                svg path {
+                    fill: $gray-600;
+                }
+            }
+
+            a {
+
+                @include media-breakpoint-up(lg) {
+                    padding: 10px 20px;
+                }
             }
         }
     }
