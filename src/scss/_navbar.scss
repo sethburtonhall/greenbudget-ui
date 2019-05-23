@@ -126,10 +126,40 @@
                     content: none;
                 }
 
+                .caret {
+                    position: relative;
+                    right: 30px;
+                    top: 4px;
+                }
+
+                &.show .caret:before,
+                &.show .caret:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-width: 7px 8px;
+                    border-style: solid;
+                    border-color: transparent;
+                    z-index: 1001;
+                }
+
+                &.show .caret:before {
+                    bottom: -17px;
+                    right: -8px;
+                    border-bottom-color: #ccc;
+                }
+
+                &.show .caret:after {
+                    bottom: -18px;
+                    right: -8px;
+                    border-bottom-color: #fff;
+                }
+
                 .dropdown-menu {
                     position: absolute;
-                    // margin-top: 15px;
-                    // left: 0;
+
                 }
             }
 
