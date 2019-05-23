@@ -115,6 +115,24 @@
 
         .nav-item {
 
+            .dropdown {
+                cursor: pointer;
+                -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+                -moz-user-select: none; /* mozilla browsers */
+                -khtml-user-select: none; /* webkit (konqueror) browsers */
+                -ms-user-select: none; /* IE10+ */
+
+                .dropdown-toggle:after {
+                    content: none;
+                }
+
+                .dropdown-menu {
+                    position: absolute;
+                    // margin-top: 15px;
+                    // left: 0;
+                }
+            }
+
             .nav-link {
                 color: $body-color;
                 margin-right: 10px;
@@ -135,23 +153,6 @@
                         height: 60px;
                         border-radius: 50%;
                         border: 3px solid $white;
-                    }
-                }
-
-                .dropdown {
-
-                    .show > .btn.dropdown-toggle {
-                        background-color: transparent;
-                        color: $dark;
-
-                        &:focus {
-                            box-shadow: none;
-                        }
-                    }
-
-                    .dropdown-menu {
-                        position: absolute;
-                        margin-top: 15px;
                     }
                 }
             }
@@ -204,21 +205,5 @@
 
     .form-check {
         padding: 5px 35px;
-    }
-}
-
-.dropdown {
-
-    .show > .btn.dropdown-toggle {
-        background-color: transparent;
-        color: $dark;
-
-        &:active {
-            background-color: transparent;
-        }
-
-        &:focus {
-            box-shadow: none;
-        }
     }
 }
