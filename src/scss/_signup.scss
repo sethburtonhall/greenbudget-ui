@@ -1,9 +1,12 @@
 .signup,
 .signin {
-        height: 100vh;
+    height : auto;
+    min-height : 100%;
 
     .container {
-        padding: 0 30px;
+        padding: 0 30px 100px 30px;
+        height : auto;
+        min-height : 100%;
     }
 
     header {

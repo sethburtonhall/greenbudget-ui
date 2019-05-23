@@ -10,10 +10,18 @@
 
     .container {
         max-width: 1650px;
-        margin-top: 6rem;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 2rem;
+        }
     }
 
     .action-bar {
+        margin-bottom: 20px;
+
+        .header {
+            margin-bottom: 0;
+        }
 
         .btn-group {
 
@@ -71,6 +79,19 @@
                 }
             }
 
+            .dropdown-menu {
+                padding: 30px 0;
+
+                .dropdown-item {
+                    padding: 0.25rem 0.8rem;
+                }
+
+                svg {
+                    width: 33px;
+                    margin-right: 5px;
+                }
+            }
+
             &.show .dropdown-toggle {
                 rect {
                     fill: $white;
@@ -79,81 +100,126 @@
         }
     }
 
-    .card {
-        border-radius: 14px;
-        margin-bottom: 20px;
-
-        @include media-breakpoint-up(xl) {
-            width: auto;
+    .icons {
+        [class*='col-'] {
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
-        .card-img-top {
-            height: 150px;
-        }
+        .card {
+            border-radius: 14px;
+            margin-bottom: 20px;
 
-        img {
-            object-fit: cover;
-        }
 
-        .production-company {
-            position: absolute;
-            top: 15px;
-            left: 15px;
 
-            .production-company-logo {
-                width: 36px;
-                height: 36px;
-                border-radius: 50%;
+            @include media-breakpoint-up(xl) {
+                width: 100%;
             }
 
-            p {
+            @include media-breakpoint-up(xxl) {
+                width: 100%;
+            }
+
+            .card-img-top {
+
+                @include media-breakpoint-up(xl) {
+                    height: 174px;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    height: 224px;
+                }
+            }
+
+            img {
+                object-fit: cover;
+            }
+
+            .production-company {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+
+                .production-company-logo {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                }
+
+                p {
+                    color: $white;
+                    margin: 0 0 0 10px;
+                }
+            }
+
+            .dropdown {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: white;
+                cursor: pointer;
+
+                .btn-group {
+
+                    .dropdown-toggle {
+                        padding: 0 15px;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    button {
+                        padding-right: 0;
+
+                        svg {
+                            float: right;
+                            height: 38px;
+                        }
+                    }
+
+                    .btn {
+                        min-width: 0px;
+                    }
+
+                    .btn:not(:disabled):not(.disabled):active:focus {
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+
+                    .dropdown-menu {
+                        min-width: 7.5rem;
+                    }
+                }
+
+                .show > .btn.dropdown-toggle {
+                    background-color: transparent;
+                }
+            }
+
+            .card-body {
+                background-color: $dark;
                 color: $white;
-                margin: 0 0 0 10px;
-            }
-        }
+                border-radius: 0 0 14px 14px;
+                padding: 13px 15px;
 
-        .dropdown {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            color: white;
-            cursor: pointer;
+                h5 {
 
-            .btn-group .dropdown-toggle:after {
-                display: none;
-            }
-
-            button {
-                padding-right: 0;
-
-                svg {
-                    float: right;
+                    @include media-breakpoint-only(xs) {
+                        font-size: 14px;
+                    }
                 }
-            }
-        }
 
-        .card-body {
-            background-color: $dark;
-            color: $white;
-            border-radius: 0 0 14px 14px;
-            padding: 13px 15px;
-
-            h5 {
-
-                @include media-breakpoint-only(xs) {
-                    font-size: 14px;
+                .card-title {
+                    margin: 0;
                 }
-            }
 
-            .card-title {
-                margin: 0;
-            }
+                .card-text.small {
+                    font-size: 10px;
 
-            .card-text.small {
-                font-size: 10px;
-
-                @include media-breakpoint-up(sm) {
-                    font-size: 12px;
+                    @include media-breakpoint-up(sm) {
+                        font-size: 12px;
+                    }
                 }
             }
         }

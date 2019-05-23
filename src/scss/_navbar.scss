@@ -137,6 +137,23 @@
                         border: 3px solid $white;
                     }
                 }
+
+                .dropdown {
+
+                    .show > .btn.dropdown-toggle {
+                        background-color: transparent;
+                        color: $dark;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        position: absolute;
+                        margin-top: 15px;
+                    }
+                }
             }
 
             i {
@@ -187,5 +204,21 @@
 
     .form-check {
         padding: 5px 35px;
+    }
+}
+
+.dropdown {
+
+    .show > .btn.dropdown-toggle {
+        background-color: transparent;
+        color: $dark;
+
+        &:active {
+            background-color: transparent;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
     }
 }
