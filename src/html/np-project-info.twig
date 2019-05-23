@@ -14,95 +14,60 @@
                 <h1 class="header">Project Info</h1>
                 <div class="form-row">
                     <div class="col-xl-6 pr-xl-4">
-                        <div class="form-group row">
-                            <label for="productionName" class="col-sm-3 col-form-label">Production Name:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="productionName" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="productionName" class="col-form-label">Production Name:</label>
+                            <input type="text" class="form-control" id="productionName" required>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="projectNumber" class="col-sm-3 col-form-label">Project Number:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="projectNumber" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="projectNumber" class="col-form-label">Project Number:</label>
+                            <input type="text" class="form-control" id="projectNumber" required>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="productionType" class="col-sm-3 col-form-label">Production Type:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="productionType" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="productionType" class="col-form-label">Production Type:</label>
+                            <input type="text" class="form-control" id="productionType" required>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="shootingFormat" class="col-sm-3 col-form-label">Shooting Format:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="shootingFormat" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="shootingFormat" class="col-form-label">Shooting Format:</label>
+                            <input type="text" class="form-control" id="shootingFormat" required>
                         </div>
 
-                        <div class="form-group row image-upload">
-                            {# <label for="uploadImage" class="col-sm-3 col-form-label">Project Image:</label> #}
-                            <div class="col-sm-6">
-                                <label for="uploadImage">
-                                    <img src="img/upload-image.svg" alt="Upload an Image">
-                                    <p id="emailHelp" class="form-text text-muted text-center">Upload Project Image</p>
-                                </label>
-                                <input type="file" class="form-control-file" id="uploadImage" required>
-                            </div>
+                        <div class="form-group image-upload">
+                            <label for="uploadImage">
+                                <img src="img/upload-image.svg" alt="Upload an Image">
+                                <p id="emailHelp" class="form-text text-muted text-center">Upload Project Image</p>
+                            </label>
+                            <input type="file" class="form-control-file" id="uploadImage" required>
                         </div>
                     </div>
 
                     <div class="col-xl-6 pl-xl-4">
-                        <div class="form-group row">
-                            <label for="shootDateFrom" class="col-sm-3 col-form-label">Shoot Dates:</label>
-                            <div class="col-sm-9">
-                                <div class="form-row">
-                                    {# <div class="col-md-5">
-                                        <input type="text" class="form-control calendar" id="shootDateFrom" placeholder="Select Date.." data-input required>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="shootDateTo" class="col-sm-3 col-form-label pl-0 pr-0 float-md-right">To:</label>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <input type="text" class="form-control calendar" id="shootDateTo" placeholder="Select Date.." required>
-                                    </div> #}
-
-                                    <input type="text" class="form-control" id="shootDateRange" placeholder="Select Dates.." data-input required>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="shootDateRange" class="col-form-label">Shoot Dates:</label>
+                            <input type="text" class="form-control" id="shootDateRange" placeholder="Select Dates.." data-input required>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="shootingFormat" class="col-sm-3 col-form-label">Delivery Date:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control calendar" id="shootingFormat" placeholder="Select Date.." required>
-                            </div>
+                        <div class="form-group">
+                            <label for="deliveryDate" class="col-form-label">Delivery Date:</label>
+                            <input type="text" class="form-control calendar" id="deliveryDate" placeholder="Select Date.." required>
                         </div>
-                        <div class="form-group row">
-                            <label for="buildDays" class="col-sm-3 col-form-label">Build Days:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="buildDays" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="buildDays" class="col-form-label">Build Days:</label>
+                            <input type="text" class="form-control" id="buildDays" required>
                         </div>
-                        <div class="form-group row">
-                            <label for="preflightDays" class="col-sm-3 col-form-label">Prelight Days:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="preflightDays" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="preflightDays" class="col-form-label">Prelight Days:</label>
+                            <input type="text" class="form-control" id="preflightDays" required>
                         </div>
-                        <div class="form-group row">
-                            <label for="studioShootDays" class="col-sm-3 col-form-label">Studio Shoot Days:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="studioShootDays" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="studioShootDays" class="col-form-label">Studio Shoot Days:</label>
+                            <input type="text" class="form-control" id="studioShootDays" required>
                         </div>
-                        <div class="form-group row">
-                            <label for="locationDays" class="col-sm-3 col-form-label">Location Days:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="locationDays" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="locationDays" class="col-form-label">Location Days:</label>
+                            <input type="text" class="form-control" id="locationDays" required>
                         </div>
                     </div>
 

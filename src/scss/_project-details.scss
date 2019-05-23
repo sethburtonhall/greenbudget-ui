@@ -22,10 +22,6 @@
 
         .form-group.row {
             margin-bottom: .5rem;
-
-            @include media-breakpoint-up(lg) {
-                margin-bottom: 1.5rem;
-            }
         }
 
         .image-upload,
@@ -43,6 +39,10 @@
             input {
                 display: none;
             }
+        }
+
+        .image-upload {
+            width: 60%;
         }
 
         .image-upload-alt {
