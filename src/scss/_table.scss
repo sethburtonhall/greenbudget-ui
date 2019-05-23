@@ -122,6 +122,13 @@
             &:hover {
                 background: lighten($primary, 45);
 
+                .bg-dark {
+                    background-color: lighten($primary, 45) !important;
+                    color: $dark;
+                    border-top: 1px solid $gray-300;
+                    border-bottom: 1px solid $gray-300;
+                }
+
                 th[scope=row] {
 
                     &::before {
@@ -153,6 +160,13 @@
 
             &.bg-highlight {
                 background-color: lighten($primary, 45);
+
+                .bg-dark {
+                    background-color: lighten($primary, 45) !important;
+                    color: $dark;
+                    border-top: 1px solid $gray-300;
+                    border-bottom: 1px solid $gray-300;
+                }
             }
 
             &.borderless {
@@ -227,7 +241,6 @@
 
         [class*="bg-"] {
             color: $white;
-            border: $dark;
             border: none;
 
             th {
