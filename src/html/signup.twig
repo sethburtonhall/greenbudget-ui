@@ -15,7 +15,7 @@
         <form>
             <div class="header">
                 <h1>Sign Up.</h1>
-                <p>It's easy and free.</p>
+                <p class="small-text">It's easy and free.</p>
             </div>
 
             <div class="form-row">
@@ -37,9 +37,15 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password">
+                <a href="#" class="forgot-password d-block mt-2">Forgot Password?</a>
             </div>
 
             <button type="submit" class="btn btn-dark btn-lg btn-block">Continue</button>
+
+            <div class="google d-flex justify-content-center align-items-center">
+                <img src="/img/icons/google.svg" onload="SVGInject(this)" alt="Sign in with Google">
+                <span>Sign in with Google</span>
+            </div>
         </form>
 
         <div class="footer">

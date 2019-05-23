@@ -28,7 +28,7 @@
             <form>
                 <div class="header">
                     <h1>Sign Up.</h1>
-                    <p>It's easy and free.</p>
+                    <p class="small-text">It's easy and free.</p>
                 </div>
 
                 <div class="form-row">
@@ -50,9 +50,15 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password">
+                    <a href="#" class="forgot-password d-block mt-2">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="btn btn-dark btn-lg btn-block">Continue</button>
+
+                <div class="google d-flex justify-content-center align-items-center">
+                    <img src="/img/icons/google.svg" onload="SVGInject(this)" alt="Sign in with Google">
+                    <span>Sign in with Google</span>
+                </div>
             </form>
 
             <div class="footer">
@@ -67,6 +73,24 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/custom-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script type="text/javascript">
+        $('.calendar').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">'
+        });
+
+        $('#shootDateRange').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">',
+            mode: "range"
+        });
+    </script>
     <!-- jQuery Custom Scroller CDN -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
 </body>

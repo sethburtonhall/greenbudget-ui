@@ -78,12 +78,6 @@
                                 <label for="productionCompany" class="col-sm-3 col-form-label">Production Company:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="productionCompany" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a production company.
-                                    </div>
                                 </div>
                             </div>
 
@@ -91,12 +85,6 @@
                                 <label for="address" class="col-sm-3 col-form-label">Address:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="address" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter an address.
-                                    </div>
                                 </div>
                             </div>
 
@@ -104,12 +92,6 @@
                                 <label for="email" class="col-sm-3 col-form-label">Email:</label>
                                 <div class="col-sm-9">
                                     <input type="email" class="form-control" id="email" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter an email address.
-                                    </div>
                                 </div>
                             </div>
 
@@ -117,12 +99,6 @@
                                 <label for="phone" class="col-sm-3 col-form-label">Phone:</label>
                                 <div class="col-sm-9">
                                     <input type="tel" class="form-control" id="phone" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter phone number.
-                                    </div>
                                 </div>
                             </div>
 
@@ -130,12 +106,6 @@
                                 <label for="producer" class="col-sm-3 col-form-label">Producer:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="producer" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
                                 </div>
                             </div>
 
@@ -143,12 +113,6 @@
                                 <label for="director" class="col-sm-3 col-form-label">Director:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="director" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
                                 </div>
                             </div>
 
@@ -156,12 +120,6 @@
                                 <label for="dp" class="col-sm-3 col-form-label">Director of Photography:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="dp" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
                                 </div>
                             </div>
 
@@ -169,12 +127,6 @@
                                 <label for="editor" class="col-sm-3 col-form-label">Editor:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="editor" required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -211,6 +163,24 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/custom-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script type="text/javascript">
+        $('.calendar').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">'
+        });
+
+        $('#shootDateRange').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">',
+            mode: "range"
+        });
+    </script>
     <!-- jQuery Custom Scroller CDN -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
 </body>

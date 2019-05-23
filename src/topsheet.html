@@ -89,10 +89,18 @@
 
                 <ul class="navbar-nav order-2 order-lg-4">
                     <li class="nav-item">
-                        <a class="nav-link avatar" href="#">
+
+                        <div class="nav-link avatar">
                             <img src="/img/avatar.svg" class="user-avatar" onload="SVGInject(this)" alt="User Avatar">
-                            <span class="d-none d-lg-inline">Jens Jacob</span>
-                        </a>
+                            <div class="dropdown d-none d-lg-inline">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Jens Jacob
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="logout.html">Logout</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -642,9 +650,9 @@
                                     <tr>
                                         <th scope="row">1</th>
                                         <td class="category-description">Story Rights</td>
-                                        <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                         <td>1</td>
-                                        <td><span class="badge badge-pill badge-yellow">Flat</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-yellow">Flat</span></td>
                                         <td>$10</td>
                                         <td></td>
                                         <td>$500</td>
@@ -652,9 +660,9 @@
                                     <tr>
                                         <th scope="row">2</th>
                                         <td class="category-description">1st Draft</td>
-                                        <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                         <td>2</td>
-                                        <td><span class="badge badge-pill badge-red">Days</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-red">Days</span></td>
                                         <td>$650</td>
                                         <td class="multi-badge-inline"><span class="badge badge-pill badge-green">WGA</span> <span class="badge badge-pill badge-yellow">FICA</span> <span class="badge badge-pill badge-pink">WC</span> <span class="badge badge-pill badge-orange">Payroll</span> <span class="badge badge-pill badge-green">IATSE</span></td>
                                         <td>$13,000</td>
@@ -662,9 +670,9 @@
                                     <tr>
                                         <th scope="row">3</th>
                                         <td class="category-description">Research</td>
-                                        <td><span class="badge badge-pill badge-red">Jens Jacob</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-red">Jens Jacob</span></td>
                                         <td>1</td>
-                                        <td><span class="badge badge-pill badge-green">Weeks</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-green">Weeks</span></td>
                                         <td>$1,000</td>
                                         <td></td>
                                         <td>$650</td>
@@ -672,9 +680,9 @@
                                     <tr>
                                         <th scope="row">4</th>
                                         <td class="category-description">Overtime</td>
-                                        <td><span class="badge badge-pill badge-purple">Brian Bird</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-purple">Brian Bird</span></td>
                                         <td>5</td>
-                                        <td><span class="badge badge-pill badge-blue">Hours</span></td>
+                                        <td class="has-badge"><span class="badge badge-pill badge-blue">Hours</span></td>
                                         <td>$500</td>
                                         <td></td>
                                         <td>$50</td>
@@ -825,6 +833,24 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/custom-form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script type="text/javascript">
+        $('.calendar').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">'
+        });
+
+        $('#shootDateRange').flatpickr({
+            altInput: true,
+            dateFormat: 'F, d Y',
+            nextArrow: '<img src="/img/icons/next.svg" alt="next" onload="SVGInject(this)">',
+            prevArrow: '<img src="/img/icons/previous.svg" alt="previous" onload="SVGInject(this)">',
+            mode: "range"
+        });
+    </script>
     <!-- jQuery Custom Scroller CDN -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
 </body>

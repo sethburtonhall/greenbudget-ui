@@ -18,51 +18,27 @@
                             <label for="productionName" class="col-sm-3 col-form-label">Production Name:</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="productionName" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter a production name.
-                                </div>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="projectNumber" class="col-sm-3 col-form-label">Project Number:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="projectNumber" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter a project number.
-                                </div>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="productionType" class="col-sm-3 col-form-label">Production Type:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="productionType" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter a production type.
-                                </div>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="shootingFormat" class="col-sm-3 col-form-label">Shooting Format:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="shootingFormat" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter a shooting format.
-                                </div>
                             </div>
                         </div>
 
@@ -71,7 +47,7 @@
                             <div class="col-sm-6">
                                 <label for="uploadImage">
                                     <img src="img/upload-image.svg" alt="Upload an Image">
-                                    <p id="emailHelp" class="form-text text-muted text-center">Upload an Image</p>
+                                    <p id="emailHelp" class="form-text text-muted text-center">Upload Project Image</p>
                                 </label>
                                 <input type="file" class="form-control-file" id="uploadImage" required>
                             </div>
@@ -83,89 +59,49 @@
                             <label for="shootDateFrom" class="col-sm-3 col-form-label">Shoot Dates:</label>
                             <div class="col-sm-9">
                                 <div class="form-row">
-                                    <div class="col-md-5">
-                                        <input type="date" class="form-control" id="shootDateFrom" required>
-                                        <div class="valid-feedback">
-                                          Looks good!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                          Please enter a start date.
-                                        </div>
+                                    {# <div class="col-md-5">
+                                        <input type="text" class="form-control calendar" id="shootDateFrom" placeholder="Select Date.." data-input required>
                                     </div>
                                     <div class="col-md-2">
                                         <label for="shootDateTo" class="col-sm-3 col-form-label pl-0 pr-0 float-md-right">To:</label>
                                     </div>
                                     <div class="col-md-5">
-                                        <input type="date" class="form-control" id="shootDateTo" required>
-                                        <div class="valid-feedback">
-                                          Looks good!
-                                        </div>
-                                        <div class="invalid-feedback">
-                                          Please enter an end date.
-                                        </div>
-                                    </div>
+                                        <input type="text" class="form-control calendar" id="shootDateTo" placeholder="Select Date.." required>
+                                    </div> #}
+
+                                    <input type="text" class="form-control" id="shootDateRange" placeholder="Select Dates.." data-input required>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="shootingFormat" class="col-sm-3 col-form-label">Delivery Date:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
-                                <input type="date" class="form-control" id="shootingFormat" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter a delivery date.
-                                </div>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control calendar" id="shootingFormat" placeholder="Select Date.." required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="buildDays" class="col-sm-3 col-form-label">Build Days:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="buildDays" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter the number of build days.
-                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="preflightDays" class="col-sm-3 col-form-label">Prelight Days:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="preflightDays" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter the number of prelight days.
-                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="studioShootDays" class="col-sm-3 col-form-label">Studio Shoot Days:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="studioShootDays" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter the number of shoot days.
-                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="locationDays" class="col-sm-3 col-form-label">Location Days:</label>
-                            <div class="col-sm-9 col-md-4 col-lg-9 col-xl-5">
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" id="locationDays" required>
-                                <div class="valid-feedback">
-                                  Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                  Please enter the number of location days.
-                                </div>
                             </div>
                         </div>
                     </div>

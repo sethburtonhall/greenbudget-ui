@@ -27,10 +27,18 @@
 
     <ul class="navbar-nav order-2 order-lg-4">
         <li class="nav-item">
-            <a class="nav-link avatar" href="#">
+
+            <div class="nav-link avatar">
                 <img src="/img/avatar.svg" class="user-avatar" onload="SVGInject(this)" alt="User Avatar">
-                <span class="d-none d-lg-inline">Jens Jacob</span>
-            </a>
+                <div class="dropdown d-none d-lg-inline">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Jens Jacob
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
         </li>
     </ul>
 </nav>
