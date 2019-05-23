@@ -24,6 +24,14 @@
             margin-bottom: .5rem;
         }
 
+        .short-input {
+            width: 25%;
+
+            @include media-breakpoint-up(md) {
+                width: 25%;
+            }
+        }
+
         .image-upload,
         .image-upload-alt {
 
