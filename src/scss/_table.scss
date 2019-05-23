@@ -8,15 +8,12 @@
         text-transform: uppercase;
         color: $white;
 
-        tr th[scope=col]:first-child {
-            padding: 10px 0;
-        }
-
         .dropdown {
             top: 1px;
 
             .dropdown-toggle {
-                min-width: 75px;
+                min-width: 56px;
+                font-size: 1rem;
 
                 @include media-breakpoint-up(xl) {
                     &:after {
@@ -95,9 +92,11 @@
     th[scope=row] {
         position: relative;
         color: $gray-500;
-        width: 75px;
+        width: 50px;
         text-align: center;
         border-left: 0;
+        border-right: 1px solid transparent;
+        padding-right: 36px;
 
         &::before {
             font-family: "Font Awesome 5 Free";
@@ -242,6 +241,7 @@
 
             th[scope=row] {
                 border: 1px solid $gray-300;
+                border-right: 1px solid transparent;
 
                 &::before {
                     color: $gray-300;
