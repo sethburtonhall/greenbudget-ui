@@ -1,10 +1,21 @@
 .topsheet {
 
     .container {
+        width: 100%;
 
         @include media-breakpoint-up(lg) {
-            padding-left: 90px;
-            margin: auto;
+            max-width: 821px;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 140px 0 137px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 1097px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 1440px;
         }
     }
 
@@ -39,25 +50,22 @@
                     flex-direction: row;
                     border: none;
                     margin: 0 0 15px 0;
-                    padding: 5px;
-                    min-height: 120px;
+                    padding: 18px;
+                    max-height: 107px;
 
                     @include media-breakpoint-up(lg) {
                         padding: 10px;
                     }
 
                     .card-image {
-                        width: 100px;
-                        height: 100px;
+                        width: 77px;
+                        height: 77px;
                     }
 
                     .card-body {
                         padding: 0;
                         margin-left: 10px;
-
-                        @include media-breakpoint-down(lg) {
-                            font-size: 16px;
-                        }
+                        font-size: 12px;
 
                         .card-title {
                             font-weight: 900;
@@ -78,17 +86,16 @@
                         }
                     }
 
-                    .fa-info-circle {
-                        color: $gray-300;
-                            padding: 20px 20px 20px 0px;
-                        font-size: 20px;
+                    svg {
+                        fill: red;
+                        width: 25px;
 
                         @include media-breakpoint-up(xl) {
                             visibility: hidden;
                         }
                     }
 
-                    &:hover .fa-info-circle {
+                    &:hover svg {
 
                         @include media-breakpoint-up(xl) {
                             visibility: visible;

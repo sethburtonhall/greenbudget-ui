@@ -1,8 +1,10 @@
 .navbar {
     justify-content: space-between;
+    padding: .5rem 1rem;
 
-    @include media-breakpoint-up(md) {
-        padding: 6px 2rem;
+    @include media-breakpoint-up(lg) {
+        padding: 0 2rem;
+        height: 49px;
     }
 
     &.navbar-basic {
@@ -69,16 +71,11 @@
         .form-control {
             padding-left: 0;
         }
-
-        .export {
-
-            svg {
-                width: 20px;
-            }
-        }
     }
 
     .spinner {
+        margin-right: 20px;
+
         .spinner-border {
             margin-left: 20px;
             margin-right: 10px;
@@ -93,10 +90,12 @@
     }
 
     .export-icon {
-        margin-right: 20px;
+        margin-right: 16px;
 
         @include media-breakpoint-up(lg) {
-            margin-right: 15px;
+            padding: 11px 18px;
+            border-left: 1px solid $gray-200;
+            margin: 0;
         }
 
         svg {
@@ -175,14 +174,24 @@
                 &.avatar {
                     text-transform: capitalize;
                     font-size: $font-size-md;
-                    padding: 0;
+                    padding: 0 0 0 8px;
+
+                    @include media-breakpoint-up(lg) {
+                        padding: 10px 0 9px 8px;
+                        border-left: 1px solid $gray-200;
+                    }
 
                     svg {
                         vertical-align: middle;
-                        width: 60px;
-                        height: 60px;
+                        width: 31px;
+                        height: 31px;
                         border-radius: 50%;
-                        border: 3px solid $white;
+                        stroke: white;
+                        stroke-width: 7px;
+                    }
+
+                    span {
+                        font-size: 12px;
                     }
                 }
             }

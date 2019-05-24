@@ -1,5 +1,5 @@
 #sidebar {
-    width: 250px;
+    width: 192px;
     position: fixed;
     top: 0;
     height: 100vh;
@@ -9,7 +9,7 @@
     transition: all 0.3s;
 
     @include media-breakpoint-down(md) {
-        left: -250px;
+        left: -192px;
     }
 
     :focus {
@@ -50,6 +50,10 @@
         .home {
             padding: 25px 0;
             margin-bottom: 25px;
+
+            svg {
+                width: 125px;
+            }
         }
 
         // .user-avatar-wrapper {
@@ -88,16 +92,16 @@
             }
 
             a {
-                padding: 10px 40px;
-                font-size: 14px;
+                padding: 10px 25px;
+                font-size: 13px;
                 font-weight: 500;
                 color: $white;
                 display: block;
 
                 svg {
                     margin-right: 10px;
-                    width: 25px;
-                    height: 30px;
+                    width: 22px;
+                    height: 26px;
 
                     path {
                         fill: $white;
@@ -217,7 +221,7 @@
         width: 100%;
 
         @include media-breakpoint-up(lg) {
-            padding-left: 250px;
+            padding-left: 192px;
         }
     }
 

@@ -64,26 +64,24 @@ $theme-colors: (
     "cyan":       $cyan
 );
 
+$enable-responsive-font-sizes: true;
+$enable-shadows: true;
+
 @font-face {
     font-family: "Avenir";
     src: url("/fonts/Avenir.ttc") format("ttc");
 }
-$font-family-sans-serif:      Avenir;
-
-$enable-responsive-font-sizes: true;
-$enable-shadows: true;
-
-// $font-family-sans-serif:
-
-$body-bg: #F7F7F7;
-$table-dark-bg: $dark;
-$table-dark-border-color: $dark;
-$text-muted: #9EA0A5;
+$font-family-sans-serif: Avenir;
 $line-height-sm: 1;
-
+$font-size-md: 1.125rem;
 $border-radius: .6rem;
 
-$font-size-md: 1.125rem;
+$body-bg: #F7F7F7;
+$text-muted: #9EA0A5;
+
+$table-dark-bg: $dark;
+$table-dark-border-color: $dark;
+$table-cell-padding: .55rem;
 
 // Spacers
 

@@ -2,7 +2,6 @@ form {
 
     .header {
         margin-bottom: 40px;
-        font-weight: 900;
     }
 
     .form-group.row {
@@ -44,11 +43,11 @@ form {
     }
 
     .image-upload {
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .button-group {
-        margin-top: $spacer*2;
+        margin-top: $spacer;
 
         .btn {
             min-width: 130px;

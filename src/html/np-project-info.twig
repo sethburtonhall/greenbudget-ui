@@ -14,60 +14,82 @@
                 <h1 class="header">Project Info</h1>
                 <div class="form-row">
                     <div class="col-xl-6 pr-xl-4">
-                        <div class="form-group">
-                            <label for="productionName" class="col-form-label">Production Name:</label>
-                            <input type="text" class="form-control" id="productionName" required>
+                        <div class="form-group row">
+                            <label for="productionName" class="col-xl-4 col-xxl-3 col-form-label">Production Name:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control" id="productionName" required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="projectNumber" class="col-form-label">Project Number:</label>
-                            <input type="text" class="form-control" id="projectNumber" required>
+                        <div class="form-group row">
+                            <label for="projectNumber" class="col-xl-4 col-xxl-3 col-form-label">Project Number:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="projectNumber" required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="productionType" class="col-form-label">Production Type:</label>
-                            <input type="text" class="form-control" id="productionType" required>
+                        <div class="form-group row">
+                            <label for="productionType" class="col-xl-4 col-xxl-3 col-form-label">Production Type:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="productionType" required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="shootingFormat" class="col-form-label">Shooting Format:</label>
-                            <input type="text" class="form-control" id="shootingFormat" required>
+                        <div class="form-group row">
+                            <label for="shootingFormat" class="col-xl-4 col-xxl-3 col-form-label">Shooting Format:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="shootingFormat" required>
+                            </div>
                         </div>
 
-                        <div class="form-group image-upload">
-                            <label for="uploadImage">
-                                <img src="img/upload-image.svg" alt="Upload an Image">
-                                <p id="emailHelp" class="form-text text-muted text-center">Upload Project Image</p>
-                            </label>
-                            <input type="file" class="form-control-file" id="uploadImage" required>
+                        <div class="form-group row image-upload">
+                            <div class="col-9 col-xl-7">
+                                <label for="uploadImage">
+                                    <img src="img/upload-image.svg" alt="Upload an Image">
+                                    <p id="emailHelp" class="form-text text-muted">Upload Project Image</p>
+                                </label>
+                                <input type="file" class="form-control-file" id="uploadImage" required>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-xl-6 pl-xl-4">
-                        <div class="form-group">
-                            <label for="shootDateRange" class="col-form-label">Shoot Dates:</label>
-                            <input type="text" class="form-control" id="shootDateRange" placeholder="Select Dates.." data-input required>
+                        <div class="form-group row">
+                            <label for="shootDateRange" class="col-xl-4 col-xxl-3 col-form-label">Shoot Dates:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control" id="shootDateRange" placeholder="Select Dates.." data-input required>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="deliveryDate" class="col-form-label">Delivery Date:</label>
-                            <input type="text" class="form-control calendar" id="deliveryDate" placeholder="Select Date.." required>
+                        <div class="form-group row">
+                            <label for="deliveryDate" class="col-xl-4 col-xxl-3 col-form-label">Delivery Date:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control calendar w-50" id="deliveryDate" placeholder="Select Date.." required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="buildDays" class="col-form-label">Build Days:</label>
-                            <input type="text" class="form-control short-input" id="buildDays" required>
+                        <div class="form-group row">
+                            <label for="buildDays" class="col-xl-4 col-xxl-3 col-form-label">Build Days:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="buildDays" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="preflightDays" class="col-form-label">Prelight Days:</label>
-                            <input type="text" class="form-control short-input" id="preflightDays" required>
+                        <div class="form-group row">
+                            <label for="preflightDays" class="col-xl-4 col-xxl-3 col-form-label">Prelight Days:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="preflightDays" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="studioShootDays" class="col-form-label">Studio Shoot Days:</label>
-                            <input type="text" class="form-control short-input" id="studioShootDays" required>
+                        <div class="form-group row">
+                            <label for="studioShootDays" class="col-xl-4 col-xxl-3 col-form-label">Studio Shoot Days:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="studioShootDays" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="locationDays" class="col-form-label">Location Days:</label>
-                            <input type="text" class="form-control short-input" id="locationDays" required>
+                        <div class="form-group row">
+                            <label for="locationDays" class="col-xl-4 col-xxl-3 col-form-label">Location Days:</label>
+                            <div class="col-xl-8 col-xxl-9">
+                                <input type="text" class="form-control w-50" id="locationDays" required>
+                            </div>
                         </div>
                     </div>
 
