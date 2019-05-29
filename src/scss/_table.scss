@@ -82,12 +82,23 @@
 
         th {
             border: 0;
+
+            &.col-divider {
+                background: $body-bg;
+                border: none;
+            }
         }
 
         tr {
 
-            th:first-child {
-                text-align: center;
+            th {
+                &:first-child {
+                    text-align: center;
+                }
+
+                &.bg-dark {
+                    border-left: 1px solid $dark;
+                }
             }
         }
     }
@@ -233,6 +244,11 @@
             text-align: left;
         }
 
+        .col-divider {
+            background: $body-bg;
+            border: none;
+        }
+
         .add-new-row th[scope=row] i {
             font-size: 20px;
         }
@@ -288,15 +304,13 @@
 
 .totals {
     text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 15px;
 
-    .total {
-        background: $white;
-        padding: 1px 10px;
-        margin-left: 20px;
-        border-radius: $border-radius-lg;
-        border: 2px solid $gray-300;
-        width: 115px;
+    .transparent-cell {
+        background: $body-bg;
+        border: none;
+    }
+
+    .bold {
+        font-weight: 900;
     }
 }

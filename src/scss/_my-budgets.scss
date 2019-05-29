@@ -14,6 +14,10 @@
         @include media-breakpoint-up(lg) {
             margin-top: 41px;
             padding-left: 273px;
+            padding-right: 57px;
+        }
+
+        @include media-breakpoint-up(xxl) {
             padding-right: 137px;
         }
     }
@@ -114,11 +118,13 @@
             width: 100%;
 
             @include media-breakpoint-up(xl) {
-                width: 304px;
+                width: 100%;
+                max-width: 304px;
             }
 
             @include media-breakpoint-up(xxl) {
                 width: 100%;
+                max-width: 404px;
             }
 
             .card-img-top {
