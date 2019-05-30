@@ -85,7 +85,7 @@
 
             &.col-divider {
                 background: $body-bg;
-                border: none;
+                border: 1px solid $body-bg;
             }
         }
 
@@ -246,7 +246,7 @@
 
         .col-divider {
             background: $body-bg;
-            border: none;
+            border: 1px solid $body-bg;
         }
 
         .add-new-row th[scope=row] i {
@@ -307,7 +307,7 @@
 
     .transparent-cell {
         background: $body-bg;
-        border: none;
+        border: 1px solid $body-bg;
     }
 
     .bold {
