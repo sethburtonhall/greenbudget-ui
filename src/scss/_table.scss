@@ -201,13 +201,21 @@
             vertical-align: middle;
 
             &.category-description {
+                position: relative;
+                padding-right: 80px;
 
                 span {
+                    position: absolute;
+                    right: 15px;
                     font-weight: 900;
                     font-size: 16px;
-                    color: transparent;
                     float: right;
+                    color: $gray-400;
                     transform: rotate(135deg);
+
+                    @include media-breakpoint-up(lg) {
+                        color: transparent;
+                    }
                 }
 
                 a {
