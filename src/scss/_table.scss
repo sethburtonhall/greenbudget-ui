@@ -157,6 +157,11 @@
                         display: block;
                     }
                 }
+
+                td span {
+                    cursor: pointer;
+                    color: $gray-400;
+                }
             }
 
             // td.multi-badge-inline {
@@ -197,19 +202,12 @@
 
             &.category-description {
 
-                &:after {
-                    font-family: "Font Awesome 5 Free";
+                span {
                     font-weight: 900;
                     font-size: 16px;
-                    content: "\f337";
                     color: transparent;
                     float: right;
                     transform: rotate(135deg);
-                }
-
-                &:hover:after {
-                    cursor: pointer;
-                    color: $gray-300;
                 }
 
                 a {
