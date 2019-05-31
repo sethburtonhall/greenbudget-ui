@@ -84,7 +84,7 @@
 
         .spinner-status {
             text-transform: uppercase;
-            font-size: 12px;
+            @include font-size(12px);
             font-weight: normal;
         }
     }
@@ -173,7 +173,7 @@
 
                 &.avatar {
                     text-transform: capitalize;
-                    font-size: $font-size-md;
+                    @include font-size(18px);
                     padding: 0 0 0 8px;
 
                     @include media-breakpoint-up(lg) {
@@ -191,13 +191,13 @@
                     }
 
                     span {
-                        font-size: 12px;
+                        @include font-size(12px);
                     }
                 }
             }
 
             i {
-                font-size: 20px;
+                @include font-size(20px);
                 margin-left: 5px;
             }
         }

@@ -61,7 +61,7 @@
             // width: 60%;
 
             .form-text {
-                font-size: 11px;
+                @include font-size(11px);
                 margin-left: 10px;
             }
         }

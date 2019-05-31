@@ -65,7 +65,7 @@ $theme-colors: (
 );
 
 $enable-responsive-font-sizes: true;
-$enable-shadows: true;
+$rfs-base-font-size: 1rem;
 
 @font-face {
     font-family: "Avenir";
@@ -73,11 +73,11 @@ $enable-shadows: true;
 }
 $font-family-sans-serif: Avenir;
 $line-height-sm: 1;
-$font-size-md: 1.125rem;
-$border-radius: .6rem;
-
 $body-bg: #F7F7F7;
 $text-muted: #9EA0A5;
+
+$border-radius: .6rem;
+$enable-shadows: true;
 
 $table-dark-bg: $dark;
 $table-dark-border-color: $dark;
